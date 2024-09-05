@@ -1,0 +1,169 @@
+.cursor-dot {
+    width: 7px;
+    height: 7px;
+    background-color: aliceblue;
+}
+
+.cursor-outline {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgb(255, 255, 255);
+}
+
+.cursor-dot,
+.cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* import React, { useEffect, useRef, useState } from 'react';
+import './Home.css';
+
+export default function Home() {
+  const [curr, setCurr] = useState(0);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [dimensions, setDimensions] = useState({ width: 300, height: 300 });
+  const bgRef = useRef(null);
+  const divRef = useRef(null);
+
+  const cursorOutline = useRef(null);
+  const cursorDot = useRef(null);
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const posX = e.clientX;
+      const posY = e.clientY;
+
+      if (cursorOutline.current) {
+        cursorOutline.current.animate([
+          {
+            left: `${posX}px`,
+            top: `${posY}px`
+          },
+        ], { duration: 500, fill: 'forwards' });
+      }
+
+      if (cursorDot.current) {
+        cursorDot.current.style.left = `${posX}px`;
+        cursorDot.current.style.top = `${posY}px`;
+      }
+
+      if (divRef.current) {
+        divRef.current.animate([
+          {
+            left: `${posX}px`,
+            top: `${posY}px`
+          },
+        ], { duration: 500, fill: 'forwards' });
+      }
+
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
+  useEffect(() => {
+    const randomizeAnimation = () => {
+      if (!bgRef.current) return;
+
+      function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      function getRandomAngle(min, max) {
+        var c = Math.floor(Math.random() * (max - min + 1)) + min
+        setCurr(c)
+        return c;
+      }
+
+      const maxVal = 50;
+      const minVal = -50;
+
+      const element = bgRef.current;
+      const animationDuration = 30; // Random duration between 5s and 15s
+      const keyframes = `@keyframes one { ` +
+        `0% { left: 0px; top: 0px; transform: rotate(0deg);} ` +
+        `25% { left: -70px; top: 50px; transform: rotate(90deg);} ` +
+        `50% { left: 30; top: 80px; transform: rotate(180deg);} ` +
+        `75% { left: 50px; top: 70px; transform: rotate(270deg);} ` +
+        `100% { left: 0px; top: 0; transform: rotate(360deg);}px; } ` +
+        `}`;
+
+      const styleSheet = document.createElement("style");
+      styleSheet.type = "text/css";
+      styleSheet.innerText = keyframes;
+      document.head.appendChild(styleSheet);
+
+      element.style.animation = `one ${animationDuration}s infinite`;
+      // element.style.animation = `breathe 8s linear infinite`;
+    };
+
+    randomizeAnimation();
+    const intervalId = setInterval(randomizeAnimation, 10000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
+  return (
+    // <div className=' absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] text-center'></div>
+    <div className='flex flex-col items-center justify-center w-full h-screen text-center'>
+      <div className='cursor-outline' ref={cursorOutline} >
+      <div
+        // ref={divRef}
+        style={{
+          left: position.x - dimensions.width / 2,
+          top: position.y - dimensions.height / 2,
+          position: 'relative'
+        }}
+      >
+        <div
+          style={{
+            opacity: 0.5,
+            filter: 'blur(60px)',
+            position: 'relative',
+            width: '300px',
+            height: '400px', borderRadius: '9999px',
+            // background: `linear-gradient(90deg, #3effe8 1.98%, #3effe8 1.99%, #8c0fee)`,
+            background: `linear-gradient(90deg, rgb(140, 0, 215) 1.98%, rgb(225, 72, 173) 1.99%, rgb(30, 0, 225))`,
+            zIndex: 0,
+          }}
+          ref={bgRef}
+        />
+      </div>
+      </div>
+      <div className='cursor-dot' ref={cursorDot} />
+      
+
+      <div>
+        <div
+          style={{ zIndex: 1, }}
+          className=' w-screen  text-7xl font-black'>
+          <div style={{ zIndex: 1, }}>Together, Let’s</div>
+          <div>
+            <span>React </span>
+            to Your Vision!
+          </div>
+        </div>
+        <div className=' font-["Poppins"] text-xl font-normal mt-6'>
+          <div>
+            Where Your Ideas
+            <span> React</span>
+          </div>
+          <div>with Creative Code</div>
+        </div>
+      </div>
+    </div>
+  );
+} */
