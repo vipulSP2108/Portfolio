@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import './Home.css';
 import Cursor from '../Components/Cursor';
 import GridBg from '../Components/GridBg';
+import Navbar from '../Components/Navbar';
 
 export default function Home() {
   const ReactTextRef = useRef(null);
@@ -38,15 +39,18 @@ export default function Home() {
 
   return (
     <div
-      className='z-0 bg-[#171C24] flex flex-col items-center justify-center w-full h-screen text-center'
+      className='z-0  flex flex-col items-center justify-center w-full h-screen text-center'
     >
-      <GridBg />
-      <Cursor />
+      {/* <GridBg /> */}
+      {/* <Cursor /> */}
+
+      <Navbar />
 
       <div className=' z-30'>
         <div
+          style={{ fontFamily: "Zain" }} // Zain
           // style={{ zIndex: 1, }}
-          className=' w-screen  text-7xl font-black'>
+          className=' w-screen  text-8xl font-black'>
           <div>Together, Let’s</div>
           <div>
             <span
@@ -67,7 +71,8 @@ export default function Home() {
             </span> to Your Vision!
           </div>
         </div>
-        <div className=' font-["Poppins"] text-xl font-normal mt-6 text-[#888888]'>
+        {/* Montserrat */}
+        <div style={{ fontFamily: "Montserrat" }} className=' font-["Poppins"] text-xl font-normal text-[#888888]'>
           <div>
             Where Your Ideas
             <span> React</span>

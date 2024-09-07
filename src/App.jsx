@@ -1,10 +1,14 @@
 import { COLORS } from "./style/colors";
-import Home from './Pages/Home'
+import Contact from "./Pages/Contact";
+import Home from "./Pages/Home";
+import GridBg from "./Components/GridBg";
 
 export default function App() {
   return (
-    <div className='w-full text-white' style={{backgroundColor: COLORS.backgroundColor}}>
+    <div className='w-full text-white bg-[#171C24] px-16' >
+      <GridBg/>
       <Home />
+      <Contact />
     </div>
   )
 }

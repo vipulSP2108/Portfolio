@@ -134,7 +134,7 @@ export default function GridBg() {
     }, []);
 
   return (
-    <div>
+    <div className=' bg-[#171C24]'>
         <div
         style={{
           backgroundImage: `url(${gridSvg})`,
