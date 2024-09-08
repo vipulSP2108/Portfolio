@@ -1,10 +1,38 @@
-import React, { useEffect, useRef, useState } from 'react';
+const setGap = 21;
+const divideWidth = 7;
+const divideHeight = 4;
+
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import './Home.css';
 import Cursor from '../Components/Cursor';
 import GridBg from '../Components/GridBg';
 import Navbar from '../Components/Navbar';
+import { GlobalStateContext } from '../Context/GlobalStateProvider';
 
 export default function Home() {
+
+  const { oneGap, setOneGap, oneCellHeight, setOneCellHeight, oneCellWidth, setOneCellWidth } = useContext(GlobalStateContext);
+
+  // <------------------------- Context updation ------------------------->
+  const [parentHeight, setParentHeight] = useState(window.innerHeight);
+  const [parentWidth, setParentWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setParentHeight(window.innerHeight);
+      setParentWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    setOneGap(setGap);
+    setOneCellWidth((parentWidth / divideWidth) - (setGap))
+    setOneCellHeight((parentHeight / divideHeight) - (setGap))
+  }, [parentHeight, setGap]);
+
+    // ---------------------------------
   const ReactTextRef = useRef(null);
 
   useEffect(() => {
@@ -43,7 +71,6 @@ export default function Home() {
     >
       {/* <GridBg /> */}
       {/* <Cursor /> */}
-
       {/* <Navbar /> */}
 
       <div className=' z-30'>

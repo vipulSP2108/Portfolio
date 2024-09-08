@@ -1,38 +1,14 @@
 // npm i react-icons
 
-import React, { useState, useEffect, useRef } from 'react';
-const setGap = 21;
-const divideWidth = 7;
-const divideHeight = 4;
+import React, { useState, useEffect, useRef, useContext } from 'react';
 import './Home.css';
 import { FaArrowLeftLong, FaArrowRightLong, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa6';
 import { MagneticIcon } from '../Components/MagneticIcon';
 import RotationText from '../Components/RotationText';
+import { GlobalStateContext } from '../Context/GlobalStateProvider';
 
 export default function Contact() {
-    const [parentHeight, setParentHeight] = useState(window.innerHeight);
-    const [parentWidth, setParentWidth] = useState(window.innerWidth);
-
-    const [oneGap, setOneGap] = useState(0);
-    const [oneCellHeight, setOneCellHeight] = useState(0);
-    const [oneCellWidth, setOneCellWidth] = useState(0);
-
-    // Update parentHeight on window resize
-    useEffect(() => {
-        const handleResize = () => {
-            setParentHeight(window.innerHeight);
-            setParentWidth(window.innerWidth);
-        };
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-    useEffect(() => {
-        setOneGap(setGap);
-        setOneCellWidth((parentWidth / divideWidth) - (setGap))
-        setOneCellHeight((parentHeight / divideHeight) - (setGap))
-    }, [parentHeight, setGap]);
-
+    const {  oneGap, oneCellHeight, oneCellWidth } = useContext(GlobalStateContext);
     const [isHoveredonEmail, setIsHoveredonEmail] = useState(false);
 
     return (
