@@ -1,4 +1,5 @@
 // npm i react-icons
+// npm install gsap
 
 import { COLORS } from "./style/colors";
 import Contact from "./Pages/Contact";
@@ -6,6 +7,9 @@ import Home from "./Pages/Home";
 import GridBg from "./Components/GridBg";
 import Cursor from "./Components/Cursor";
 import Navbar from "./Components/Navbar";
+import Grid from "./Pages/Grid";
+import Movingbar from "./Components/Movingbar";
+
 
 export default function App() {
   return (
@@ -14,9 +18,13 @@ export default function App() {
       {/* <Cursor/> */}
       <Navbar />
       <Home />
+      <Movingbar/>
       <Contact />
-      <div className=" flex justify-between px-12 p-5">
+
+      {/* <Grid/> */}
+
       {/* 💙 💝 */}
+      <div className=" flex justify-between px-12 p-5">
         <text style={{ fontFamily: "Zain" }} className=' text-2xl'>© Made with 💖 by VIPul</text>
         <text style={{ fontFamily: "Zain" }} className=' text-2xl'>Thanks for stoping by.</text>
       </div>

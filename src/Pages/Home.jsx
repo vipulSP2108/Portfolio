@@ -1,4 +1,4 @@
-const setGap = 21;
+const setGap = 16;
 const divideWidth = 7;
 const divideHeight = 4;
 

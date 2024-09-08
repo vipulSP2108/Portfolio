@@ -140,7 +140,7 @@ export default function GridBg() {
           backgroundImage: `url(${gridSvg})`,
           backgroundSize: `500px`,
         }}
-        className='z-10 hex-grid top-0 left-0 absolute w-full h-full bg-repeat'
+        className='z-10 hex-grid top-0 left-0 absolute w-full h-screen bg-repeat'
       />
       {divs.map(div => (
         <div
