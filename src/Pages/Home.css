@@ -1,27 +1,96 @@
 .gradient-text {
-    /* background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #00ff00, #ff0000, #00ff00, #0000ff); */
-    background: linear-gradient(45deg, #65DCF8, #6EB7FF, #005FEA, #005FEA, #504FFB);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 1000% 1000%;
+  /* background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #00ff00, #ff0000, #00ff00, #0000ff); */
+  background: linear-gradient(45deg, #65DCF8, #6EB7FF, #005FEA, #005FEA, #504FFB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 1000% 1000%;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+#glass {
+  background: rgba(27, 32, 36, 0.4);
+  /* background: rgba(0, 0, 0, 0.4); */
+  backdrop-filter: blur(4px);
+  /* opacity: 0.9; */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border-radius: 30px;
+}
+
+#container {
+  position: relative;
+  /* overflow: hidden; */
+  border-width: 1px;
+  border-color: #888888;
+  border-style: solid;
+}
+
+#rotatable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #888888;
+  transform: rotate(-45deg);
+  border-radius: 50%;
+  transition: transform 1s; /* Simplified transition property */
+}
+
+#upperRotable:hover #rotatable {
+  transform: rotate(360deg) translateZ(0); /* Modern property */
+}
+
+.arrow {
+  position: absolute;
+  opacity: 0.6;
+  left: 10px;
+  transition: left 0.2s linear;
+}
+
+#container:hover .arrow {
+  opacity: 1
+}
+
+
+
+
+/* #emailroatation {
+  position: relative;
+  animation: animate 7.5s linear infinite;
+} */
+
+/* .splitemailroatation {
+  position: absolute;
+  top:0;
+  left: 0;
+  display: inline-block;
+  transform-origin: 50% 50%;
+  padding: 2px;
+} */
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .fade-enter {
-    opacity: 0;
+  100% {
+    transform: rotate(360deg);
   }
-  
-  .fade-enter-active {
-    opacity: 1;
-    transition: opacity 1s ease-in;
-  }
-  
-  .fade-exit {
-    opacity: 1;
-  }
-  
-  .fade-exit-active {
-    opacity: 0;
-    transition: opacity 1s ease-out;
-  }
-  
-  
+}

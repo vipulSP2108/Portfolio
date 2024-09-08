@@ -44,7 +44,7 @@ export default function Home() {
       {/* <GridBg /> */}
       {/* <Cursor /> */}
 
-      <Navbar />
+      {/* <Navbar /> */}
 
       <div className=' z-30'>
         <div
@@ -72,7 +72,7 @@ export default function Home() {
           </div>
         </div>
         {/* Montserrat */}
-        <div style={{ fontFamily: "Montserrat" }} className=' font-["Poppins"] text-xl font-normal text-[#888888]'>
+        <div style={{ fontFamily: "Montserrat" }} className=' text-xl font-normal text-[#888888]'>
           <div>
             Where Your Ideas
             <span> React</span>

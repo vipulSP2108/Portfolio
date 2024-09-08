@@ -24,14 +24,14 @@ export default function Cursor() {
                 cursorDot.current.style.top = `${posY}px`;
             }
 
-            if (divRef.current) {
-                divRef.current.animate([
-                    {
-                        left: `${posX}px`,
-                        top: `${posY}px`
-                    },
-                ], { duration: 500, fill: 'forwards' });
-            }
+            // if (divRef.current) {
+            //     divRef.current.animate([
+            //         {
+            //             left: `${posX}px`,
+            //             top: `${posY}px`
+            //         },
+            //     ], { duration: 500, fill: 'forwards' });
+            // }
 
         };
 

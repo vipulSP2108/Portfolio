@@ -23,5 +23,34 @@
     opacity: 0;
     transition: opacity 1s ease-out;
   }
+
+
+
+
+  #emailroatation {
+    /* right: 0; */
+    /* position: absolute; */
+    color: #6EB7FF;
+    user-select: none;
+    pointer-events: none;
+    animation: animate 7.5s linear infinite;
+  }
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  #splitemailroatation {
+    position: absolute;
+    top: -60px;
+    /* display: inline-block; */
+    transform-origin: 0 60px;
+  }
+  
+
   
   
