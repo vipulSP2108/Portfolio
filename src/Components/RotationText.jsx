@@ -12,7 +12,7 @@ const RotationText = ({ text }) => {
 
         const elements = container.querySelectorAll('#splitemailroatation');
         elements.forEach((element, index) => {
-            element.style.transform = `rotate(${index * 24}deg)`;
+            element.style.transform = `rotate(${index * 11.4}deg)`;
         });
 
         // const element = container.querySelectorAll('#splitemailroatation');
@@ -23,7 +23,7 @@ const RotationText = ({ text }) => {
     }, [text]);
 
     return (
-        <div ref={containerRef} id="emailroatation" className=''>
+        <div ref={containerRef} id="emailroatation" >
             {text}
         </div>
     );

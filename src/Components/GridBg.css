@@ -37,18 +37,21 @@
   }
   @keyframes animate {
     0% {
-      transform: rotate(0deg);
+      transform: rotate(360deg);
     }
     100% {
-      transform: rotate(360deg);
+      transform: rotate(0deg);
     }
   }
   
   #splitemailroatation {
     position: absolute;
-    top: -60px;
+    /* top: -130px; */
+    top: -115px;
+    /* right: 40px; */
     /* display: inline-block; */
-    transform-origin: 0 60px;
+    /* transform-origin: 0 120px; */
+    transform-origin: 0px 120px;
   }
   
 

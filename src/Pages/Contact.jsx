@@ -114,10 +114,18 @@ export default function Contact() {
                             <div
                                 onMouseMove={() => setIsHoveredonEmail(true)}
                                 onMouseLeave={() => setIsHoveredonEmail(false)}
-                                className=" bg-[rgb(34,114,239)] px-6 rounded-full h-11 w-52 flex items-center justify-center"
+                                className=" bg-[rgb(34,114,239)] px-6 rounded-full h-11 w-52 overflow-hidden"
                             >
-                                {!isHoveredonEmail && 'email@gmail.com'}
-                                {isHoveredonEmail && <RotationText text="email@gmail.com" />}
+                                {!isHoveredonEmail && 
+                                <text className=' self-center flex justify-center h-full items-center'>email@gmail.com</text>}
+                                {isHoveredonEmail &&
+                                    <div 
+                                    //   className=' pl-36 pt-32'
+                                      className=' pl-40 pt-28'
+                                    >
+                                        <RotationText text="email@gmail.com * email@gmail.com * " />
+                                    </div>
+                                     }
                             </div>
 
                             {/* <div ref={containerRef} id='emailroatation' className=' pointer-events-none bg-[#2272EF] px-6 rounded-full h-11 flex items-center justify-center'>email@gmail.com</div> */}
