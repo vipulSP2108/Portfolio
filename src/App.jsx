@@ -14,9 +14,13 @@ import Movingbar from "./Components/Movingbar";
 import Projects from "./Pages/Projects";
 import Contactbar from "./Components/Contactbar";
 import About from "./Pages/About";
+import Contact2 from "./Pages/Contact2";
+import Work from "./Pages/Work";
+import Expereence from "./Pages/Experence";
 
 
 export default function App() {
+  
   return (
     <div style={{ fontFamily: "Zain" }} className='w-full text-2xl text-white bg-[#171C24] ' >
       {/* <GridBg/> */}
@@ -25,19 +29,23 @@ export default function App() {
       <Contactbar/>
       <Home />
       <Movingbar/>
-      <Movingbar/>
       <About/>
+      <Work/>
+      <Projects/>
+      {/* <Expereence/> */}
+      <Work/>
+      {/* <Movingbar/> */}
+
       
-      {/* <Projects/> */}
       <Contact />
+      {/* <Contact2 /> */}
       
 
       {/* <Grid/> */}
-
       {/* 💙 💝 */}
-      <div className=" flex justify-between px-12 p-5">
-        <text style={{ fontFamily: "Zain" }} className=' text-2xl'>© Made with 💖 by VIPul</text>
-        <text style={{ fontFamily: "Zain" }} className=' text-2xl'>Thanks for stoping by...</text>
+      <div className="flex justify-between px-12 p-5">
+        <text style={{ fontFamily: "Zain" }} className=' z-30 text-2xl'>© Made with 💖 by VIPul</text>
+        <text style={{ fontFamily: "Zain" }} className=' z-30 text-2xl'>Thanks for stoping by...</text>
       </div>
     </div>
   )

@@ -4,7 +4,7 @@ import { FaArrowUp } from 'react-icons/fa6';
 
 export default function Navbar() {
   return (
-    <div className=' fixed z-50 p-[7px] top-12 left-14 justify-between rounded-full'
+    <div className=' fixed z-50 p-[7px] top-12 right-14 justify-between rounded-full'
       // style={{ width: `${(oneCellWidth * 4)}px`, height: `${oneCellHeight * 2}px` }}
       id='glasses'
       // style={{ backgroundColor: "#888888" }}

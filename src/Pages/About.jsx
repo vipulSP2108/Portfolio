@@ -32,7 +32,7 @@ export default function About() {
                 id='glasses'
             >
                 <div className=' flex items-center justify-center'>
-                    <text>ABOUT</text>
+                    <text style={{fontFamily:'Montserrat'}} className=' uppercase'>Who I am</text>
                 </div>
                 <div className='flex items-center justify-center gap-4'>
                     <div className=' gap-4 flex flex-col items-end'>
