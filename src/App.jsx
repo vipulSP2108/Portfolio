@@ -13,17 +13,21 @@ import Grid from "./Pages/Grid";
 import Movingbar from "./Components/Movingbar";
 import Projects from "./Pages/Projects";
 import Contactbar from "./Components/Contactbar";
+import About from "./Pages/About";
 
 
 export default function App() {
   return (
     <div style={{ fontFamily: "Zain" }} className='w-full text-2xl text-white bg-[#171C24] ' >
-      <GridBg/>
+      {/* <GridBg/> */}
       {/* <Cursor/> */}
       <Navbar />
       <Contactbar/>
       <Home />
       <Movingbar/>
+      <Movingbar/>
+      <About/>
+      
       {/* <Projects/> */}
       <Contact />
       

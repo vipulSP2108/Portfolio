@@ -8,7 +8,7 @@ import RotationText from '../Components/RotationText';
 import { GlobalStateContext } from '../Context/GlobalStateProvider';
 
 export default function Contact() {
-    const {  oneGap, oneCellHeight, oneCellWidth } = useContext(GlobalStateContext);
+    const { oneGap, oneCellHeight, oneCellWidth } = useContext(GlobalStateContext);
     const [isHoveredonEmail, setIsHoveredonEmail] = useState(false);
 
     return (
@@ -92,16 +92,16 @@ export default function Contact() {
                                 onMouseLeave={() => setIsHoveredonEmail(false)}
                                 className=" bg-[rgb(34,114,239)] px-6 rounded-full h-11 w-52 overflow-hidden"
                             >
-                                {!isHoveredonEmail && 
-                                <text className=' self-center flex justify-center h-full items-center'>email@gmail.com</text>}
+                                {!isHoveredonEmail &&
+                                    <text className=' self-center flex justify-center h-full items-center'>email@gmail.com</text>}
                                 {isHoveredonEmail &&
-                                    <div 
-                                    //   className=' pl-36 pt-32'
-                                      className=' pl-40 pt-28'
+                                    <div
+                                        //   className=' pl-36 pt-32'
+                                        className=' pl-40 pt-28'
                                     >
                                         <RotationText text="email@gmail.com * email@gmail.com * " />
                                     </div>
-                                     }
+                                }
                             </div>
 
                             {/* <div ref={containerRef} id='emailroatation' className=' pointer-events-none bg-[#2272EF] px-6 rounded-full h-11 flex items-center justify-center'>email@gmail.com</div> */}
