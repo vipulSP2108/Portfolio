@@ -32,7 +32,7 @@ export default function Home() {
     setOneCellHeight((parentHeight / divideHeight) - (setGap))
   }, [parentHeight, setGap]);
 
-    // ---------------------------------
+  // ---------------------------------
   const ReactTextRef = useRef(null);
 
   useEffect(() => {
@@ -74,39 +74,43 @@ export default function Home() {
       {/* <Navbar /> */}
 
       <div className=' z-30'>
-        <div
-          style={{ fontFamily: "Zain" }} // Zain
-          // style={{ zIndex: 1, }}
-          className=' w-screen  text-8xl font-black'>
-          <div>Together, Let’s</div>
-          <div>
-            <span
-              ref={ReactTextRef}
-              style={{
-                // display: 'inline-block', //
-                background: 'linear-gradient(45deg, #65DCF8, #6EB7FF, #005FEA, #504FFB)',
-                // backgroundClip: 'text', //
-                WebkitBackgroundClip: 'text',
-                // color: 'transparent',
-                WebkitTextFillColor: 'transparent',
-                // textFillColor: 'transparent', //
-                backgroundSize: '1000% 1000%',
-                // animation: 'gradient-animation 3s ease infinite',
-              }}
-            >
-              React
-            </span> to Your Vision!
-          </div>
+        <div style={{ fontFamily: "Montserrat" }} className=' text-xl font-black text-[#888888]'>
+          NAMASKAR !!!
         </div>
-        {/* Montserrat */}
-        <div style={{ fontFamily: "Montserrat" }} className=' text-xl font-normal text-[#888888]'>
+      </div>
+      <div
+        style={{ fontFamily: "Zain" }} // Zain
+        // style={{ zIndex: 1, }}
+        className=' z-30 w-screen  text-8xl font-black'>
+        <div>Together, Let’s</div>
+        <div>
+          <span
+            ref={ReactTextRef}
+            style={{
+              // display: 'inline-block', //
+              background: 'linear-gradient(45deg, #65DCF8, #6EB7FF, #005FEA, #504FFB)',
+              // backgroundClip: 'text', //
+              WebkitBackgroundClip: 'text',
+              // color: 'transparent',
+              WebkitTextFillColor: 'transparent',
+              // textFillColor: 'transparent', //
+              backgroundSize: '1000% 1000%',
+              // animation: 'gradient-animation 3s ease infinite',
+            }}
+          >
+            React
+          </span> to Your Vision!
+        </div>
+      </div>
+      {/* Montserrat */}
+      {/* <div style={{ fontFamily: "Montserrat" }} className=' text-xl font-normal text-[#888888]'>
           <div>
             Where Your Ideas
             <span> React</span>
           </div>
           <div>with Creative Code</div>
         </div>
-      </div>
+      </div> */}
 
     </div>
   );

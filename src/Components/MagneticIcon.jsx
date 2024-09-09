@@ -8,7 +8,8 @@ export const MagneticIcon = ({ icon: Icon, size, background = 'transparent' }) =
         const rect = e.currentTarget.getBoundingClientRect();
         const x = e.clientX - rect.left - rect.width / 2;
         const y = e.clientY - rect.top - rect.height / 2;
-        setTransform({ x: x * 0.3, y: y * 0.5 });
+        // Increase the scaling factors to make the magnetic field larger
+        setTransform({ x: x * 1, y: y * 2 }); // Adjust these values as needed
     };
 
     const handleMouseEnter = () => {
@@ -21,7 +22,7 @@ export const MagneticIcon = ({ icon: Icon, size, background = 'transparent' }) =
     };
 
     return (
-        <div style={{ transition: 'transform 0.16s linear' }}>
+        <div style={{ transition: 'transform 0.3s cubic-bezier(.25,.1,.25,1.5)' }}>
             <div
                 className='rounded-full h-11 w-11 flex items-center justify-center'
                 onMouseMove={handleMouseMove}
@@ -30,8 +31,8 @@ export const MagneticIcon = ({ icon: Icon, size, background = 'transparent' }) =
                 style={{
                     background: hover && background,
                     borderWidth: 1,
-                    transition: 'transform 0.16s linear',
-                    transform: `translate(${transform.x}px, ${transform.y}px) scale(${hover ? 1.1 : 1})`
+                    transition: 'transform 0.3s cubic-bezier(.25,.1,.25,1.5)', // Adjust transition for bounciness
+                    transform: `translate(${transform.x}px, ${transform.y}px) scale(${hover ? 1.2 : 1})` // Increase scale for hover effect
                 }}
             >
                 <Icon size={size} style={{}} />
@@ -39,6 +40,7 @@ export const MagneticIcon = ({ icon: Icon, size, background = 'transparent' }) =
         </div>
     );
 };
+
 
 // <-------------------------- No Scale Animation ------------------------->
 

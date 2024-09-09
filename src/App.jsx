@@ -12,25 +12,28 @@ import Navbar from "./Components/Navbar";
 import Grid from "./Pages/Grid";
 import Movingbar from "./Components/Movingbar";
 import Projects from "./Pages/Projects";
+import Contactbar from "./Components/Contactbar";
 
 
 export default function App() {
   return (
     <div style={{ fontFamily: "Zain" }} className='w-full text-2xl text-white bg-[#171C24] ' >
-      {/* <GridBg/> */}
+      <GridBg/>
       {/* <Cursor/> */}
       <Navbar />
+      <Contactbar/>
       <Home />
       <Movingbar/>
       {/* <Projects/> */}
       <Contact />
+      
 
       {/* <Grid/> */}
 
       {/* 💙 💝 */}
       <div className=" flex justify-between px-12 p-5">
         <text style={{ fontFamily: "Zain" }} className=' text-2xl'>© Made with 💖 by VIPul</text>
-        <text style={{ fontFamily: "Zain" }} className=' text-2xl'>Thanks for stoping by.</text>
+        <text style={{ fontFamily: "Zain" }} className=' text-2xl'>Thanks for stoping by...</text>
       </div>
     </div>
   )
