@@ -51,11 +51,13 @@
   border-color: #888888;
   transform: rotate(-45deg);
   border-radius: 50%;
-  transition: transform 1s; /* Simplified transition property */
+  transition: transform 1s;
+  /* Simplified transition property */
 }
 
 #upperRotable:hover #rotatable {
-  transform: rotate(360deg) translateZ(0); /* Modern property */
+  transform: rotate(360deg) translateZ(0);
+  /* Modern property */
 }
 
 .arrow {
@@ -90,7 +92,57 @@
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
+
+
+
+
+/* ----------------------------- Projects ----------------------- */
+
+/* #indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  border-radius: 100%;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#gallary {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  overflow: hidden;
+}
+
+#gallary-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1px 20px;
+  height: 400px;
+  margin: 0 5px;
+  background: #000;
+  overflow: hidden;
+  transition: flex 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#gallary-item img {
+  width: 40px;
+  height: 80px;
+  object-fit: contain;
+  transform: scale(2);
+}
+
+#gallary-item-div {
+  width: 400px;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(2);
+} */

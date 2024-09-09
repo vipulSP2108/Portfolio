@@ -92,11 +92,12 @@ export default function Movingbar({ LeftTRight = true }) {
     }, []);
 
     return (
-        <section className=' relative text-3xl overflow-hidden bg-black uppercase flex' id="marquee">
+        <section style={{ fontFamily: "Montserrat" }} className='z-30 relative text-3xl overflow-hidden bg-black uppercase flex' id="marquee">
             <div id="marquee_inner" className=' flex flex-row items-center '>
                 {[...Array(7)].map((_, index) => (
                     <div id="marquee_part" className='flex items-center justify-center flex-shrink-0 ' key={index}>
-                        <text className=' mt-1'>modern creative studio</text>
+                        <text >modern creative studio</text> 
+                        {/* className=' mt-1' */}
                         <div id="arrow" className=' p-5'>
                             <FaArrowDown />
                         </div>

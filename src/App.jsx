@@ -1,5 +1,7 @@
 // npm i react-icons
 // npm install gsap
+// Zain
+// Montserrat
 
 import { COLORS } from "./style/colors";
 import Contact from "./Pages/Contact";
@@ -9,6 +11,7 @@ import Cursor from "./Components/Cursor";
 import Navbar from "./Components/Navbar";
 import Grid from "./Pages/Grid";
 import Movingbar from "./Components/Movingbar";
+import Projects from "./Pages/Projects";
 
 
 export default function App() {
@@ -19,6 +22,7 @@ export default function App() {
       <Navbar />
       <Home />
       <Movingbar/>
+      {/* <Projects/> */}
       <Contact />
 
       {/* <Grid/> */}
