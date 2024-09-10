@@ -8,6 +8,7 @@ import tailwindcss from '../assets/tailwindcss.svg';
 import Scroller from './Scroller';
 
 const textItems = [
+    // { src: 'https://i.pravatar.cc/150?img=1', alt: 'Avatar 1' },
     `UI/UX Developer`,
     'Web Design',
     'AppDesign',
@@ -43,7 +44,7 @@ export default function About() {
                             >
                                 <div>
                                     <text style={{ fontFamily: 'Montserrat' }} className='font-black'>AKA.</text>
-                                    <text className=' text-2xl font-black text-[#888888]'> Aayush.</text>
+                                    <text className=' text-2xl font-black text-[#2272EF]'> Aayush.</text>
                                 </div>
                             </div>
                             <div
@@ -84,7 +85,7 @@ export default function About() {
                         >
                             <div className=' flex flex-col h-full justify-end '>
                                 <text className=' text-[#888888] capitalize'>currenty using,</text>
-                                <text style={{ fontFamily: 'Montserrat' }} className='font-black'>Tech I ♥️</text>
+                                <text style={{ fontFamily: 'Montserrat' }} className=' font-black'>Tech I ♥️</text>
                             </div>
 
                             {/* <text style={{ lineHeight: 0.9 }} className=' text-[#888888]'>

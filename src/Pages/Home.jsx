@@ -74,7 +74,7 @@ export default function Home() {
       {/* <Navbar /> */}
 
       <div className=' z-30'>
-        <div style={{ fontFamily: "Montserrat" }} className=' text-xl font-black text-[#888888]'>
+        <div style={{ fontFamily: "Lilita One" }} className=' text-xl font-black text-[#888888]'>
           NAMASKAR !!!
         </div>
       </div>

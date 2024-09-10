@@ -2,6 +2,7 @@
 // npm install gsap
 // Zain
 // Montserrat
+// Lilita One
 
 import { COLORS } from "./style/colors";
 import Contact from "./Pages/Contact";

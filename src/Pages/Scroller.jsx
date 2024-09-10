@@ -37,9 +37,12 @@ const Scroller = ({ items, direction = 'left', speed = 'fast' }) => {
       <div className="scroller__inner">
         {items.map((item, index) =>
           typeof item === 'string' ? (
-            <div key={index} className="scroller__item">
+            <>
+            <div key={index} >
               {item}
             </div>
+            <div className=' self-center bg-white w-3 h-3 rounded-full' />
+           </>
           ) : (
             <img key={index} src={item.src} alt={item.alt || ''} />
           )
