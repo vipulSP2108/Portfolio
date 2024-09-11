@@ -37,6 +37,7 @@ export default function App() {
 
       <Movingbar />
       <Between1 />
+      
 
       <About />
 
@@ -45,12 +46,12 @@ export default function App() {
       <Projects2 />
 
       <Projects />
+      
       {/* <Between3/> */}
 
       <History />
 
       {/* <Expereence/> */}
-      {/* <Work/> */}
       {/* <Movingbar/> */}
 
 

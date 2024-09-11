@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 import './Home.css';
 import { gsap } from 'gsap';
 
-export default function Work({ imgSources, outlets }) {
+export default function Work({ imgSources, outlets, noImage = false }) {
     const [hoveredItem, setHoveredItem] = useState(null);
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
     const menuRef = useRef(null);
@@ -136,63 +136,52 @@ export default function Work({ imgSources, outlets }) {
     }, []);
 
     return (
-        // <div style={{ userSelect: 'none' }} className='z-0 flex flex-col h-screen'>
-        //     <div className='z-30 flex-1 flex flex-col justify-center' id='glasses'>
-        <div style={{ userSelect: 'none' }} className=' z-0 flex flex-col  px-16 my-12  '>
-            <div
-                className=' z-30 flex-1 flex flex-col justify-center rounded-2xl'
-                id='glasses'
-                style={{ paddingTop: '90px', paddingBottom: '130px' }}
+        <div id='containors'>
+            {
+                !noImage &&
+                <div ref={priviewRef} id="priview"
+                    style={{
+                        backgroundColor: 'white',
+                        top: cursorPosition.y,
+                        left: cursorPosition.x,
+                    }}
+                >
+                    <div className='priviewimg priviewimg1' ref={preview1Ref}></div>
+                    <div className='priviewimg priviewimg2' ref={preview2Ref}></div>
+                </div>
+            }
+
+            <div ref={menuRef} id='menu'
+            // style={{
+            //     padding:'0 4em',
+            // }}
             >
-                <div className='flex items-center justify-center mb-12'>
-                    <span style={{ fontFamily: 'Montserrat' }} className='uppercase'>Explore Work</span>
-                </div>
-
-                <div id='containors'>
-                    <div ref={priviewRef} id="priview"
+                {outlets.map((outlet, index) => (
+                    <div
+                        ref={el => menuItemsRef.current[index] = el}
+                        id='menuitem'
+                        key={index}
                         style={{
-                            backgroundColor: 'white',
-                            top: cursorPosition.y,
-                            left: cursorPosition.x,
+                            overflow: 'hidden',
+                            // backgroundColor: 'red',
+                            borderBottomWidth: '1px',
+                            borderTopWidth: index === 0 ? '1px' : '0',
+                            borderColor: '#888888',
+                            cursor: 'pointer',
                         }}
+                        className='flex justify-between'
                     >
-                        <div className='priviewimg priviewimg1' ref={preview1Ref}></div>
-                        <div className='priviewimg priviewimg2' ref={preview2Ref}></div>
+                        {/* <span id='info'><p>{outlet.cat}</p></span> */}
+                        <span id='info2'>{outlet.cat}</span>
+                        <span id='name'><p
+                            style={{ fontFamily: 'Montserrat', textTransform: 'uppercase', fontWeight: 800, }}
+                        >{outlet.name}</p></span>
+                        <span id='tag'><p>{outlet.category}</p></span>
                     </div>
+                ))}
 
-                    <div ref={menuRef} id='menu'>
-                        {outlets.map((outlet, index) => (
-                            <div
-                                ref={el => menuItemsRef.current[index] = el}
-                                id='menuitem'
-                                key={index}
-                                style={{
-                                    overflow: 'hidden',
-                                    // backgroundColor: 'red',
-                                    borderBottomWidth: '1px',
-                                    borderTopWidth: index === 0 ? '1px' : '0',
-                                    borderColor: '#888888',
-                                    cursor: 'pointer',
-                                }}
-                                className='flex justify-between'
-                            >
-                                {/* <span id='info'><p>{outlet.cat}</p></span> */}
-                                <span id='info2'>{outlet.cat}</span>
-                                <span id='name'><p
-                                    style={{ fontFamily: 'Montserrat', textTransform: 'uppercase', fontWeight: 800, }}
-                                >{outlet.name}</p></span>
-                                <span id='tag'><p>{outlet.category}</p></span>
-                            </div>
-                        ))}
-                        <div id='info2' className=' flex flex-row gap-3 mt-3'>
-                            <div className=' w-5 h-5 bg-white rounded-full' />
-                            <div className=' w-5 h-5 bg-white rounded-full' />
-                            <div className=' w-5 h-5 bg-white rounded-full' />
-                        </div>
-                    </div>
-
-                </div>
             </div>
+
         </div>
     );
 }
