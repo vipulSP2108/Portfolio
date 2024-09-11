@@ -38,7 +38,7 @@ export default function Work({ imgSources, outlets }) {
                         duplicatecopy.style.textTransform = 'uppercase',
                         duplicatecopy.style.fontWeight = 800,
                         duplicatecopy.style.height = '100%',
-                    div.appendChild(duplicatecopy);
+                        div.appendChild(duplicatecopy);
                 }
             });
         });
@@ -67,7 +67,7 @@ export default function Work({ imgSources, outlets }) {
                 top: "100%",
                 duration: 0.3,
             });
-            
+
         };
 
         // Append images and animate
@@ -140,9 +140,9 @@ export default function Work({ imgSources, outlets }) {
         //     <div className='z-30 flex-1 flex flex-col justify-center' id='glasses'>
         <div style={{ userSelect: 'none' }} className=' z-0 flex flex-col  px-16 my-12  '>
             <div
-className=' z-30 flex-1 flex flex-col justify-center rounded-2xl'
+                className=' z-30 flex-1 flex flex-col justify-center rounded-2xl'
                 id='glasses'
-            style={{ paddingTop: '90px', paddingBottom: '130px' }}
+                style={{ paddingTop: '90px', paddingBottom: '130px' }}
             >
                 <div className='flex items-center justify-center mb-12'>
                     <span style={{ fontFamily: 'Montserrat' }} className='uppercase'>Explore Work</span>
@@ -167,24 +167,30 @@ className=' z-30 flex-1 flex flex-col justify-center rounded-2xl'
                                 id='menuitem'
                                 key={index}
                                 style={{
-                                overflow: 'hidden',
-                                // backgroundColor: 'red',
-                                borderBottomWidth: '1px',
-                                borderTopWidth: index === 0 ? '1px' : '0',
-                                borderColor: '#888888',
-                                cursor: 'pointer',
-                            }}
-                            className='flex justify-between'
+                                    overflow: 'hidden',
+                                    // backgroundColor: 'red',
+                                    borderBottomWidth: '1px',
+                                    borderTopWidth: index === 0 ? '1px' : '0',
+                                    borderColor: '#888888',
+                                    cursor: 'pointer',
+                                }}
+                                className='flex justify-between'
                             >
                                 {/* <span id='info'><p>{outlet.cat}</p></span> */}
                                 <span id='info2'>{outlet.cat}</span>
                                 <span id='name'><p
-                                style={{ fontFamily: 'Montserrat', textTransform: 'uppercase', fontWeight: 800, }} 
+                                    style={{ fontFamily: 'Montserrat', textTransform: 'uppercase', fontWeight: 800, }}
                                 >{outlet.name}</p></span>
                                 <span id='tag'><p>{outlet.category}</p></span>
                             </div>
                         ))}
+                        <div id='info2' className=' flex flex-row gap-3 mt-3'>
+                            <div className=' w-5 h-5 bg-white rounded-full' />
+                            <div className=' w-5 h-5 bg-white rounded-full' />
+                            <div className=' w-5 h-5 bg-white rounded-full' />
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
