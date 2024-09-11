@@ -12,9 +12,9 @@ export default function Navbar() {
       <div style={{ fontFamily: "Zain" }} className=' bg-white flex text-black p-1 gap-6 rounded-full items-center'>
         <div className=' w-20 rounded-full h-8'></div>
         <div className=' -mb-1 text-lg text-[#131821]'>About</div>
-        <div className=' -mb-1 text-lg text-[#131821'>Work</div>
-        <div className=' -mb-1 text-lg text-[#131821'>Services</div>
-        <div className=' -mb-1 text-lg text-[#131821'>Contact</div>
+        <div className=' -mb-1 text-lg text-[#131821]'>Work</div>
+        <div className=' -mb-1 text-lg text-[#131821]'>Services</div>
+        <div className=' -mb-1 text-lg text-[#131821]'>Contact</div>
         <div className='bg-[#2272EF] w-20 rounded-full h-9 flex items-center justify-center'>
           <FaArrowUp color='#fff'/>
         </div>

@@ -6,7 +6,7 @@ import javascriptweb from '../assets/javascriptweb.png';
 import react from '../assets/react.png';
 import tailwindcss from '../assets/tailwindcss.svg';
 import Scroller from './Scroller';
-
+import { gsap } from "gsap";
 const textItems = [
     // { src: 'https://i.pravatar.cc/150?img=1', alt: 'Avatar 1' },
     `UI/UX Developer`,
@@ -24,6 +24,19 @@ const textItems = [
 //     { src: 'https://i.pravatar.cc/150?img=5', alt: 'Avatar 5' },
 //     { src: 'https://i.pravatar.cc/150?img=6', alt: 'Avatar 6' }
 //   ];
+gsap.from('#gasss', {
+    y: 90,
+    opacity: 0,
+    duration: 1,
+    scrollTrigger: {
+        trigger: "#gasss",
+        scroller: "body",
+        markers: true,
+        start: "top 60%",
+        end: "top 55%",
+        scrub: 3
+    }
+})
 
 export default function About() {
     return (
@@ -33,7 +46,7 @@ export default function About() {
                 id='glasses'
             >
                 <div className=' flex items-center justify-center'>
-                    <text style={{fontFamily:'Montserrat'}} className=' uppercase'>Who I am</text>
+                    <text style={{ fontFamily: 'Montserrat' }} className=' uppercase'>Who I am</text>
                 </div>
                 <div className='flex items-center justify-center gap-4'>
                     <div className=' gap-4 flex flex-col items-end'>
@@ -64,7 +77,7 @@ export default function About() {
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div id=' gasss'>
                             <div className='bg-black rounded-2xl w-[21rem] h-[4rem] flex overflow-hidden'
                             // id='glasses'
                             >
