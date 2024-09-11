@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import '../App.css';
 import imageMy from '../assets/My.jpg';
 import html from '../assets/html.png';
@@ -6,7 +6,7 @@ import javascriptweb from '../assets/javascriptweb.png';
 import react from '../assets/react.png';
 import tailwindcss from '../assets/tailwindcss.svg';
 import Scroller from './Scroller';
-import { gsap } from "gsap";
+import gsap from "gsap";
 const textItems = [
     // { src: 'https://i.pravatar.cc/150?img=1', alt: 'Avatar 1' },
     `UI/UX Developer`,
@@ -24,25 +24,76 @@ const textItems = [
 //     { src: 'https://i.pravatar.cc/150?img=5', alt: 'Avatar 5' },
 //     { src: 'https://i.pravatar.cc/150?img=6', alt: 'Avatar 6' }
 //   ];
-gsap.from('#gasss', {
-    y: 90,
-    opacity: 0,
-    duration: 1,
-    scrollTrigger: {
-        trigger: "#gasss",
-        scroller: "body",
-        markers: true,
-        start: "top 60%",
-        end: "top 55%",
-        scrub: 3
-    }
-})
+// gsap.from('#gasss', {
+//     y: 90,
+//     opacity: 0,
+//     duration: 1,
+//     scrollTrigger: {
+//         trigger: "#gasss",
+//         scroller: "body",
+//         markers: true,
+//         start: "top 60%",
+//         end: "top 55%",
+//         scrub: 3
+//     }
+// })
+
+
 
 export default function About() {
+    const containerRef = useRef(null);
+
+    // main - scale
+    // aka - left to right - no scale - opacity
+    // quote be happy - bottom to top - no scale - opacity
+    // techstack - right to left - no scale - opacity
+    // skills - bottom to top - no scale - opacity
+
+    useEffect(() => {
+        const element = containerRef.current;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        // Trigger GSAP animations when the element is in view
+                        // gsap.fromTo(
+                        //     '.animate-text', 
+                        //     { opacity: 0, y: 50 }, 
+                        //     { opacity: 1, y: 0, duration: 1, stagger: 0.3 }
+                        // );
+
+                        gsap.fromTo(
+                            '.about-apk-box',
+                            { opacity: 0, y: 50, scale: 0.5 },
+                            { opacity: 1, y: 0, scale: 1, duration: 1, ease: 'back.out(1.7)' }
+                        );
+
+                        // Once the animation has been triggered, stop observing
+                        // observer.unobserve(element);
+                    }
+                });
+            },
+            { threshold: 0.1 } // Adjust the threshold as needed
+        );
+
+        if (element) {
+            observer.observe(element);
+        }
+
+        return () => {
+            if (element) {
+                observer.unobserve(element);
+            }
+        };
+    }, []);
+
+
     return (
         <div style={{ userSelect: 'none' }} className=' z-0 flex flex-col  px-16 my-12 h-screen'>
             <div
-                className=' z-30 flex-1 flex flex-col justify-evenly  rounded-2xl'
+                ref={containerRef}
+                className=' z-30 flex-1 flex flex-col justify-evenly rounded-2xl about-main'
                 id='glasses'
             >
                 <div className=' flex items-center justify-center'>
@@ -52,8 +103,9 @@ export default function About() {
                     <div className=' gap-4 flex flex-col items-end'>
                         <div className='gap-4 flex flex-row items-center'>
                             <div
-                                className='rounded-2xl w-[12rem] h-[11rem] px-3 py-2 flex flex-col justify-between'
+                                className=' rounded-2xl w-[12rem] h-[11rem] px-3 py-2 flex flex-col justify-between about-aka'
                                 id='glasses'
+
                             >
                                 <div>
                                     <text style={{ fontFamily: 'Montserrat' }} className='font-black'>AKA.</text>
@@ -77,7 +129,7 @@ export default function About() {
                                 </div>
                             </div>
                         </div>
-                        <div id=' gasss'>
+                        <div id=' gasss' className=' about-skills'>
                             <div className='bg-black rounded-2xl w-[21rem] h-[4rem] flex overflow-hidden'
                             // id='glasses'
                             >
@@ -87,13 +139,13 @@ export default function About() {
                     </div>
                     <div className=' flex flex-col gap-4'>
                         <div
-                            className=' bg-black rounded-2xl w-[21rem] h-[4rem] flex flex-col justify-center items-center'
+                            className=' bg-black rounded-2xl w-[21rem] h-[4rem] flex flex-col justify-center items-center about-quote'
                         // id='glasses'
                         >
                             <text className=' text-[#888888] mt-1'>'Stay Happy, Not Depressed!'</text>
                         </div>
                         <div
-                            className='rounded-2xl w-[14rem] h-[12rem] p-3'
+                            className='rounded-2xl w-[14rem] h-[12rem] p-3 about-techstack'
                             id='glasses'
                         >
                             <div className=' flex flex-col h-full justify-end '>
