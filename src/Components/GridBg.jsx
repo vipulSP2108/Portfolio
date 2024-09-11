@@ -72,22 +72,22 @@ export default function GridBg() {
       const moveInterval = setInterval(moveDivs, 70);
   
       // Reset positions and directions every 5 seconds
-      const resetInterval = setInterval(() => {
-        // Apply fade-out effect before resetting
-        setDivs(prevDivs =>
-          prevDivs.map(div => ({
-            ...div,
-            animation: 'fade-out',
-          }))
-        );
-        setTimeout(() => {
-          resetDivs();
-        }, 1000); // Wait for the fade-out animation to complete
-      }, 3000);
+      // const resetInterval = setInterval(() => {
+      //   // Apply fade-out effect before resetting
+      //   setDivs(prevDivs =>
+      //     prevDivs.map(div => ({
+      //       ...div,
+      //       animation: 'fade-out',
+      //     }))
+      //   );
+      //   setTimeout(() => {
+      //     resetDivs();
+      //   }, 1000); // Wait for the fade-out animation to complete
+      // }, 3000);
   
       return () => {
         clearInterval(moveInterval);
-        clearInterval(resetInterval);
+        // clearInterval(resetInterval);
       };
     }, []);
   

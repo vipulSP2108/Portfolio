@@ -28,7 +28,7 @@ export default function App() {
 
   return (
     <div style={{ fontFamily: "Zain" }} className='w-full text-2xl text-white bg-[#171C24] ' >
-      {/* <GridBg/> */}
+      <GridBg/>
       {/* <Cursor/> */}
       <Navbar />
       <Contactbar />
