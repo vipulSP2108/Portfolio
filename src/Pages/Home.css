@@ -164,14 +164,15 @@ img {
 
 #menu {
   width: 100%;
-  margin: 20em 0;
+  /* margin: 20em 0; */
+  padding: 0 4em;
 }
 
 #menuitem {
   width: 100%;
   display: flex;
   /* justify-content: space-between; */
-  padding: 0 2em;
+  padding: 0.5em 0;
   cursor: pointer;
   /* border-bottom: 1px solid #888888; */
   /* border-top: 1px solid transparent; */
@@ -209,7 +210,7 @@ p {
   flex: 4;
   height: 60px;
   font-size: 60px;
-  text-align: center;
+  /* text-align: center; */
 }
 
 #info p:nth-child(2),
@@ -225,13 +226,18 @@ p {
   color: #888888;
 }
 
+#menu:hover #info2{
+  color: #888888;
+}
+
 #priview {
   position: absolute;
   top: 0;
   left: 0;
-  width: 225px;
-  height: 275px;
+  width: 310px;
+  height: 225px;
   z-index: 50;
+  /* border: 1px solid #005FEA ; */
   pointer-events: none;
 }
 
@@ -242,8 +248,8 @@ p {
 }
 
 .priviewimg2 {
-  top: 20px;
-  left: 20px;
+  top: -15px;
+  left: -15px;
 }
 
 .priviewimg img{

@@ -18,29 +18,45 @@ import About from "./Pages/About";
 import Contact2 from "./Pages/Contact2";
 import Work from "./Pages/Work";
 import Expereence from "./Pages/Experence";
+import Between1 from "./Components/Between1";
+import Between2 from "./Components/Bettween2";
+import History from "./Pages/History";
+import Projects2 from "./Pages/Projects2";
 
 
 export default function App() {
-  
+
   return (
     <div style={{ fontFamily: "Zain" }} className='w-full text-2xl text-white bg-[#171C24] ' >
       {/* <GridBg/> */}
       {/* <Cursor/> */}
       <Navbar />
-      <Contactbar/>
+      <Contactbar />
+
       <Home />
-      <Movingbar/>
-      <About/>
-      <Work/>
-      <Projects/>
+
+      <Movingbar />
+      <Between1 />
+
+      <About />
+
+      <Between2 />
+
+      <Projects2 />
+
+      <Projects />
+      {/* <Between3/> */}
+
+      <History />
+
       {/* <Expereence/> */}
-      <Work/>
+      {/* <Work/> */}
       {/* <Movingbar/> */}
 
-      
+
       {/* <Contact /> */}
       {/* <Contact2 /> */}
-      
+
 
       {/* <Grid/> */}
       {/* 💙 💝 */}
