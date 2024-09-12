@@ -24,7 +24,7 @@ export default function Projects2() {
                 style={{ paddingTop: '90px', paddingBottom: '130px' }}
             >
                 <div className='flex items-center justify-center mb-12'>
-                    <span style={{ fontFamily: 'Montserrat' }} className='uppercase'>History as Devloper</span>
+                    <span style={{ fontFamily: 'Montserrat' }} className='uppercase text-[#888888]'>History as Devloper</span>
                 </div>
 
                 <div style={{

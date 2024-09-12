@@ -213,6 +213,19 @@ p {
   /* text-align: center; */
 }
 
+#name p {
+  background: linear-gradient(to right, rgb(255, 255, 255) 50%, #444444 50%);
+  background-size: 200% 100%;
+  background-position-x: 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  /* position: relative; */
+  /* text-transform: none; */
+  /* text-align: center; */
+}
+
+
 #info p:nth-child(2),
 #name p:nth-child(2),
 #tag p:nth-child(2) {
@@ -258,6 +271,7 @@ p {
   height: 100%;
   object-fit: cover; 
 }
+
 
 
 

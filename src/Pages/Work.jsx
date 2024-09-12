@@ -1,6 +1,10 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import './Home.css';
+// import './Work.css';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Work({ imgSources, outlets, noImage = false }) {
     const [hoveredItem, setHoveredItem] = useState(null);
@@ -133,6 +137,23 @@ export default function Work({ imgSources, outlets, noImage = false }) {
         return () => {
             document.removeEventListener('mousemove', handleMouseMove);
         };
+    }, []);
+
+    useEffect(() => {
+        // GSAP animation setup
+        gsap.to("#name p", {
+            backgroundPositionX: "0%",
+            stagger: 1, // Shorter delay between each element's animation
+            duration: 10, // Short duration for quick animation
+            ease: "power1.inOut",
+            scrollTrigger: {
+                trigger: "#name", // Change to the correct selector
+                scrub: true,
+                start: "top 100%",
+                end: "bottom 10%",
+                // markers: true // Set markers to true only for debugging
+            }
+        });
     }, []);
 
     return (

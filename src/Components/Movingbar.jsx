@@ -96,7 +96,7 @@ export default function Movingbar({ LeftTRight = true }) {
             <div id="marquee_inner" className=' flex flex-row items-center '>
                 {[...Array(7)].map((_, index) => (
                     <div id="marquee_part" className='flex items-center justify-center flex-shrink-0 ' key={index}>
-                        <text >modern creative studio</text> 
+                        <text >Loving Things To Create</text> 
                         {/* className=' mt-1' */}
                         <div id="arrow" className=' p-5'>
                             <FaArrowDown />

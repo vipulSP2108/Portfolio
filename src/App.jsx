@@ -36,7 +36,7 @@ export default function App() {
       <Home />
 
       <Movingbar />
-      <Between1 />
+      {/* <Between1 /> */}
       
 
       <About />

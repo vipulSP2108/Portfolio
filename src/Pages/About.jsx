@@ -97,7 +97,7 @@ export default function About() {
                 id='glasses'
             >
                 <div className=' flex items-center justify-center'>
-                    <text style={{ fontFamily: 'Montserrat' }} className=' uppercase'>Who I am</text>
+                    <text style={{ fontFamily: 'Montserrat' }} className=' uppercase text-[#888888]'>Who I am</text>
                 </div>
                 <div className='flex items-center justify-center gap-4'>
                     <div className=' gap-4 flex flex-col items-end'>
