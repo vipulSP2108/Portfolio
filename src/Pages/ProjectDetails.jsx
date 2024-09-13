@@ -1,11 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import RentHouse from '../assets/RentHouse.png';
 import { FaArrowLeft } from 'react-icons/fa6';
+import { useLocation, useNavigate } from 'react-router-dom';
 
-// Define the ProjectDetails component with props
-export default function ProjectDetails({ projectData }) {
-    // Destructure data from the projectData prop
+export default function ProjectDetails() {
+    const location = useLocation();
+    const navigate = useNavigate();
+    const { project } = location.state || {};
+
+    if (!project) {
+        return <div>No project selected</div>;
+    }
+    
     const {
         name,
         date,
@@ -20,16 +25,27 @@ export default function ProjectDetails({ projectData }) {
             highlight,
             highlightShow,
         },
-    } = projectData;
+    } = project;
+
+    const handleBack = () => {
+        navigate(-1); // Go back to the previous page
+    };
 
     return (
         <div className='z-0 flex flex-col items-center justify-center w-full'>
-            <div style={{ fontFamily: "Montserrat" }} className='fixed z-50 p-[7px] top-12 left-10 justify-between rounded-full' id='glasses'>
+            {/* <div className='fixed z-50 p-[7px] top-12 left-10 cursor-pointer' onClick={handleBack}>
+                <div className='bg-[#2272EF] px-3 gap-2 rounded-full h-9 flex items-center justify-center text-lg font-bold'>
+                    <FaArrowLeft color='#fff' />
+                    Back
+                </div>
+            </div> */}
+            <div style={{ fontFamily: "Montserrat" }} onClick={handleBack} className='fixed z-50 p-[7px] top-12 left-10 justify-between rounded-full cursor-pointer' id='glasses'>
                 <div className='bg-[#2272EF] px-3 gap-2 rounded-full h-9 flex items-center justify-center text-lg font-bold'>
                     <FaArrowLeft color='#fff' />
                     Back
                 </div>
             </div>
+
             <div className='text-start fixed z-50 p-[7px] top-12 right-12'>
                 <div className='text-2xl uppercase my-10'>Content</div>
                 <div>
@@ -55,37 +71,37 @@ export default function ProjectDetails({ projectData }) {
                 </div>
 
                 <div className='px-48 w-full h-full'>
-                <img src={ShowCase} alt={'ShowCase'} className='w-full pt-28' />
+                    <img src={ShowCase} alt={'ShowCase'} className='w-full pt-28' />
 
-                    {/* Overview */}
+ {/* Overview */}
                     <div className='flex pt-28'>
                         <div className='w-1/2 flex flex-col gap-7'>
                             <div className='flex flex-col'>
-                                <text>My Role</text>
-                                <text className='text-[#888888]'>{role}</text>
+                                <span>My Role</span>
+                                <span className='text-[#888888]'>{role}</span>
                             </div>
                             <div className='flex flex-col'>
-                                <text>Team</text>
-                                <text className='text-[#888888]'>{team}</text>
+                                <span>Team</span>
+                                <span className='text-[#888888]'>{team}</span>
                             </div>
                             <div className='flex flex-col'>
-                                <text>Timeline & Status</text>
-                                <text className='text-[#888888]'>{timeline}</text>
+                                <span>Timeline & Status</span>
+                                <span className='text-[#888888]'>{timeline}</span>
                             </div>
                         </div>
 
                         <div className='w-1/2'>
                             <div className='flex flex-col'>
-                                <text>Overview</text>
-                                <text className='text-[#888888]'>{overview}</text>
+                                <span>Overview</span>
+                                <span className='text-[#888888]'>{overview}</span>
                             </div>
                         </div>
                     </div>
 
-                    {/* Highlights */}
+ {/* Highlights */}
                     <div className='p-7 mt-28 rounded-2xl' id='glasses'>
                         <div className='w-full text-center p-12'>
-                            <text>{highlight}</text>
+                            <span>{highlight}</span>
                         </div>
 
                         {highlightShow.map((item, index) => (
@@ -105,24 +121,26 @@ export default function ProjectDetails({ projectData }) {
     );
 }
 
-// Define prop types for the component
-ProjectDetails.propTypes = {
-    projectData: PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        date: PropTypes.string.isRequired,
-        Overview: PropTypes.shape({
-            role: PropTypes.string.isRequired,
-            team: PropTypes.string.isRequired,
-            timeline: PropTypes.string.isRequired,
-            overview: PropTypes.string.isRequired,
-        }).isRequired,
-        Highlights: PropTypes.shape({
-            highlight: PropTypes.string.isRequired,
-            highlightShow: PropTypes.arrayOf(PropTypes.shape({
-                image: PropTypes.string.isRequired,
-                imageAltText: PropTypes.string.isRequired,
-                imageDescription: PropTypes.string.isRequired,
-            })).isRequired,
-        }).isRequired,
-    }).isRequired,
-};
+
+
+// // Define prop types for the component
+// ProjectDetails.propTypes = {
+//     projectData: PropTypes.shape({
+//         name: PropTypes.string.isRequired,
+//         date: PropTypes.string.isRequired,
+//         Overview: PropTypes.shape({
+//             role: PropTypes.string.isRequired,
+//             team: PropTypes.string.isRequired,
+//             timeline: PropTypes.string.isRequired,
+//             overview: PropTypes.string.isRequired,
+//         }).isRequired,
+//         Highlights: PropTypes.shape({
+//             highlight: PropTypes.string.isRequired,
+//             highlightShow: PropTypes.arrayOf(PropTypes.shape({
+//                 image: PropTypes.string.isRequired,
+//                 imageAltText: PropTypes.string.isRequired,
+//                 imageDescription: PropTypes.string.isRequired,
+//             })).isRequired,
+//         }).isRequired,
+//     }).isRequired,
+// };

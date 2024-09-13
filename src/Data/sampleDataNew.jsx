@@ -1,3 +1,11 @@
+import RentHouse from '../assets/RentHouse.png';
+import Project from '../assets/Project.png';
+
+
+import OutsIIT from '../assets/OutsIIT.png';
+import CitiesDevGame from '../assets/Cities.png';
+import ChildSafetyMonitoring from '../assets/Cities.png';
+
 export const sampleDataNew = [
     {
       name: "OutsIIT",
