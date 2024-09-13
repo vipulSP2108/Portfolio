@@ -16,6 +16,15 @@ const textItems = [
     'Frontend Developer'
 ];
 
+const imageTechItems = [
+    // { src: 'https://i.pravatar.cc/150?img=1', alt: 'Avatar 1' },
+    `UI/UX Developer`,
+    'Web Design',
+    'AppDesign',
+    'App Developer',
+    'Frontend Developer'
+];
+
 //   const imageItems = [
 //     { src: 'https://i.pravatar.cc/150?img=1', alt: 'Avatar 1' },
 //     { src: 'https://i.pravatar.cc/150?img=2', alt: 'Avatar 2' },
@@ -122,7 +131,7 @@ export default function About() {
                             <text style={{ lineHeight: 0.9}} className=' text-[#888888]'>{`Hello there! 👋,`}<br />{`I'm versatile web and app developer, and designer with a passion for crafting engaging and user-friendly digital experiences.`}</text> */}
 
                                 <div className=' overflow-hidden w-full h-[80%] rounded-2xl'>
-                                    <img className='' src={imageMy} alt="Logo" />
+                                    <img className='' src={imageMy} alt="My Image" />
                                 </div>
                                 <div className=' overflow-hidden w-full h-[20%] flex items-center p-1'>
                                     <text>Vipul Sunil Patil</text>
@@ -145,12 +154,19 @@ export default function About() {
                             <text className=' text-[#888888] mt-1'>'Stay Happy, Not Depressed!'</text>
                         </div>
                         <div
-                            className='rounded-2xl w-[14rem] h-[12rem] p-3 about-techstack'
+                            className='rounded-2xl w-[14rem] h-[12rem] about-techstack'
                             id='glasses'
                         >
-                            <div className=' flex flex-col h-full justify-end '>
-                                <text className=' text-[#888888] capitalize'>currenty using,</text>
-                                <text style={{ fontFamily: 'Montserrat' }} className=' font-black'>Tech I ♥️</text>
+                            <div className=' flex flex-col h-full justify-between overflow-hidden p-3'>
+                                {/* <text className=' text-[#888888] capitalize'>currenty using,</text>
+                                <text style={{ fontFamily: 'Montserrat' }} className=' font-black'>Tech I ♥️</text> */}
+
+                                <div className=' rotate-90'>
+                                    <Scroller items={imageTechItems} direction="left" speed="fast" />
+                                </div>
+                                <div className=' rotate-90'>
+                                    <Scroller items={imageTechItems} direction="left" speed="fast" />
+                                </div>
                             </div>
 
                             {/* <text style={{ lineHeight: 0.9 }} className=' text-[#888888]'>

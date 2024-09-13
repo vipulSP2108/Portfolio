@@ -27,9 +27,9 @@ import Projects2 from "./Pages/Projects2";
 export default function App() {
 
   return (
-    <div style={{ fontFamily: "Zain" }} className='w-full text-2xl text-white bg-[#171C24] ' >
+    <div style={{ fontFamily: "Zain" }} className=' z-0 cursor-none w-full text-2xl text-white bg-[#171C24] ' >
       <GridBg/>
-      {/* <Cursor/> */}
+      <Cursor/>
       <Navbar />
       <Contactbar />
 

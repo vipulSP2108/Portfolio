@@ -1,0 +1,40 @@
+/* Define common styles for the navbar */
+.navbar {
+    /* position: fixed; */
+    /* z-index: 50; */
+    /* top: 12px; */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for transform and opacity */
+  }
+  
+  .navbar.right {
+    right: 10px;
+  }
+  
+  .navbar.left {
+    left: 10px;
+  }
+  
+  /* Initially hidden or off-screen */
+  .navbar.hide {
+    transform: translateY(100px); /* Moves the navbar out of view */
+    opacity: 0; /* Makes the navbar invisible */
+  }
+  
+  /* Show the navbar */
+  .navbar.show {
+    transform: translateY(0); /* Moves the navbar into view */
+    opacity: 1; /* Makes the navbar visible */
+  }
+  
+  /* Styling for the content within the navbar */
+  .content {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 1px;
+    gap: 6px;
+    border-radius: 9999px;
+    font-family: 'Zain';
+    color: black;
+  }
+  
