@@ -7,6 +7,10 @@ import react from '../assets/react.png';
 import tailwindcss from '../assets/tailwindcss.svg';
 import Scroller from './Scroller';
 import gsap from "gsap";
+import SkillsData from '../data/SkillsData';
+import { FiExternalLink } from 'react-icons/fi';
+
+
 const textItems = [
     // { src: 'https://i.pravatar.cc/150?img=1', alt: 'Avatar 1' },
     `UI/UX Developer`,
@@ -17,12 +21,16 @@ const textItems = [
 ];
 
 const imageTechItems = [
-    // { src: 'https://i.pravatar.cc/150?img=1', alt: 'Avatar 1' },
-    `UI/UX Developer`,
-    'Web Design',
-    'AppDesign',
-    'App Developer',
-    'Frontend Developer'
+    // 'WEB',
+    { src: javascriptweb, alt: 'Avatar 1' },
+];
+
+const image2TechItems = [
+    { src: 'https://m.media-amazon.com/images/I/61TYXoZohPL._SX679_.jpg', alt: 'Avatar 1' },
+    { src: 'https://m.media-amazon.com/images/I/61TYXoZohPL._SX679_.jpg', alt: 'Avatar 1' },
+    { src: 'https://m.media-amazon.com/images/I/61TYXoZohPL._SX679_.jpg', alt: 'Avatar 1' },
+    { src: 'https://m.media-amazon.com/images/I/61TYXoZohPL._SX679_.jpg', alt: 'Avatar 1' },
+    { src: 'https://m.media-amazon.com/images/I/61TYXoZohPL._SX679_.jpg', alt: 'Avatar 1' },
 ];
 
 //   const imageItems = [
@@ -142,7 +150,7 @@ export default function About() {
                             <div className='bg-black rounded-2xl w-[21rem] h-[4rem] flex overflow-hidden'
                             // id='glasses'
                             >
-                                <Scroller items={textItems} direction="left" speed="fast" />
+                                <Scroller items={textItems} topbottom='false' direction="left" speed="fast" />
                             </div>
                         </div>
                     </div>
@@ -157,15 +165,23 @@ export default function About() {
                             className='rounded-2xl w-[14rem] h-[12rem] about-techstack'
                             id='glasses'
                         >
-                            <div className=' flex flex-col h-full justify-between overflow-hidden p-3'>
-                                {/* <text className=' text-[#888888] capitalize'>currenty using,</text>
-                                <text style={{ fontFamily: 'Montserrat' }} className=' font-black'>Tech I ♥️</text> */}
-
-                                <div className=' rotate-90'>
-                                    <Scroller items={imageTechItems} direction="left" speed="fast" />
+                            <div className=' p-3 flex justify-end h-full overflow-hidden gap-3'>
+                                <div className='z-40 absolute flex flex-col bottom-2 left-2 '>
+                                    {/* <div className=' text-lg flex gap-1 '>
+                                        <text className=' text-[#888888] capitalize'>Details </text>
+                                        <div className=' bottom-10'>
+                                            <FiExternalLink size={18} color='#888888' />
+                                        </div>
+                                    </div> */}
+                                    <text className=' text-[#888888] capitalize'>currenty using,</text>
+                                    <text style={{ fontFamily: 'Montserrat' }} className=' font-black'>Tech I ♥️</text>
                                 </div>
-                                <div className=' rotate-90'>
-                                    <Scroller items={imageTechItems} direction="left" speed="fast" />
+
+                                <div className=' opacity-90'>
+                                    <Scroller items={SkillsData} topbottom='true' direction="bottom" speed="slow" />
+                                </div>
+                                <div className=' opacity-90'>
+                                    <Scroller items={SkillsData} topbottom='true' direction="top" speed="slow" />
                                 </div>
                             </div>
 

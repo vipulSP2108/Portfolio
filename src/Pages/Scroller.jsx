@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './Scroller.css'; // Import the CSS file
 
-const Scroller = ({ items, direction = 'left', speed = 'fast' }) => {
+const Scroller = ({ items, direction = 'left', speed = 'fast', topbottom='true' }) => {
   const scrollerRef = useRef(null);
 
   useEffect(() => {
@@ -31,6 +31,7 @@ const Scroller = ({ items, direction = 'left', speed = 'fast' }) => {
     <div
       className="scroller"
       data-direction={direction}
+      top-bottom={topbottom}
       data-speed={speed}
       ref={scrollerRef}
     >
@@ -41,10 +42,10 @@ const Scroller = ({ items, direction = 'left', speed = 'fast' }) => {
             <div key={index} >
               {item}
             </div>
-            <div className=' self-center bg-white w-3 h-3 rounded-full' />
+            {/* <div className=' self-center bg-white w-3 h-3 rounded-full' /> */}
            </>
           ) : (
-            <img key={index} src={item.src} alt={item.alt || ''} />
+            <img className=' h-10 w-10' key={index} style={{objectFit: 'contain'}} src={item.logo} alt={item.alt || ''} />
           )
         )}
       </div>
