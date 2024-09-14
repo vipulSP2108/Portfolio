@@ -3,6 +3,7 @@
 // Zain
 // Montserrat
 // Lilita One
+// npm install framer-motion
 
 import { COLORS } from "./style/colors";
 import Contact from "./Pages/Contact";
@@ -31,6 +32,7 @@ import { sampleDataNew } from "./Data/sampleDataNew";
 
 import { Routes, Route, HashRouter } from "react-router-dom";
 import ScrollToTop from "./Components/ScrollToTop";
+import Skills from "./Components/Skills";
 export default function App() {
 
   return (
@@ -43,13 +45,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/ProjectDetails" element={<ProjectDetails />} />
+        <Route path="/Skills" element={<Skills />} />
       </Routes>
 
-        {/* 💙 💝 */}
-        <div className="flex justify-between px-12 p-5">
-          <text style={{ fontFamily: "Zain" }} className=' z-30 text-2xl'>© Made with 💖 by VIPul</text>
-          <text style={{ fontFamily: "Zain" }} className=' z-30 text-2xl'>Thanks for stoping by...</text>
-        </div>
       </div>
 
     </HashRouter>

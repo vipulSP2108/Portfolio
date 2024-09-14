@@ -17,6 +17,8 @@ import Work from "./Work";
 
 import Between1 from "../Components/Between1";
 import Between2 from "../Components/Bettween2";
+import FooterCostom from "../Components/FooterCostom";
+
 import History from "./History";
 import Projects2 from "./Projects2";
 import ProjectDetails from "./ProjectDetails";
@@ -54,6 +56,7 @@ function HomeScreen() {
 
             {/* <Contact /> */}
             {/* <Grid/> */}
+            <FooterCostom/>
         </div>
     );
 }

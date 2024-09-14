@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaArrowLeft } from 'react-icons/fa6';
 import { useLocation, useNavigate } from 'react-router-dom';
+import FooterCostom from '../Components/FooterCostom';
 
 export default function ProjectDetails() {
     const location = useLocation();
@@ -32,6 +33,7 @@ export default function ProjectDetails() {
     };
 
     return (
+ <>
         <div className='z-0 flex flex-col items-center justify-center w-full'>
             {/* <div className='fixed z-50 p-[7px] top-12 left-10 cursor-pointer' onClick={handleBack}>
                 <div className='bg-[#2272EF] px-3 gap-2 rounded-full h-9 flex items-center justify-center text-lg font-bold'>
@@ -117,7 +119,10 @@ export default function ProjectDetails() {
                     </div>
                 </div>
             </div>
+            
         </div>
+        <FooterCostom/>
+        </>
     );
 }
 

@@ -8,8 +8,9 @@ import tailwindcss from '../assets/tailwindcss.svg';
 import Scroller from './Scroller';
 import gsap from "gsap";
 
-import { FiExternalLink } from 'react-icons/fi';
 import { sampleDataSkills } from '../Data/sampleDataSkills';
+import { useNavigate } from 'react-router-dom';
+import { FaLink } from 'react-icons/fa';
 
 
 const textItems = [
@@ -106,6 +107,13 @@ export default function About() {
         };
     }, []);
 
+    const navigate = useNavigate();
+    const handleClick = () => {
+        // if (!noNavigation){
+        //     return null
+        // }
+        navigate('/Skills');
+    };
 
     return (
         <div style={{ userSelect: 'none' }} className=' z-0 flex flex-col px-16 my-12 h-screen'>
@@ -166,14 +174,15 @@ export default function About() {
                             className='rounded-2xl w-[70%] h-[40vh] about-techstack'
                             id='glasses'
                         >
-                            <div className=' p-3 flex justify-end h-full overflow-hidden gap-3'>
+                            <div onClick={() => handleClick()} className='cursor-pointer p-3 flex justify-end h-full overflow-hidden gap-3'>
                                 <div className='z-40 absolute flex flex-col bottom-2 left-2 '>
-                                    {/* <div className=' text-lg flex gap-1 '>
+                                    <div className=' text-xl flex gap-1 items-center '>
                                         <text className=' text-[#888888] capitalize'>Details </text>
-                                        <div className=' bottom-10'>
-                                            <FiExternalLink size={18} color='#888888' />
+                                        <div className=' flex -bottom-10'>
+                                            <FaLink size={16} color='#888888' />
                                         </div>
-                                    </div> */}
+                                    </div>
+                                    {/* <text className=' text-[#888888] capitalize'>View <FiExternalLink size={18} color='#888888' /></text> */}
                                     <text className=' text-[#888888] capitalize'>currenty using,</text>
                                     <text style={{ fontFamily: 'Montserrat' }} className=' font-black'>Tech I ♥️</text>
                                 </div>
