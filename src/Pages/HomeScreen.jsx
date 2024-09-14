@@ -13,9 +13,8 @@ import Movingbar from "../Components/Movingbar";
 import Projects from "./Projects";
 import Contactbar from "../Components/Contactbar";
 import About from "./About";
-import Contact2 from "./Contact2";
 import Work from "./Work";
-import Expereence from "./Experence";
+
 import Between1 from "../Components/Between1";
 import Between2 from "../Components/Bettween2";
 import History from "./History";
@@ -48,14 +47,12 @@ function HomeScreen() {
             {/* <Between1 /> */}
             <About />
             <Between2 />
-            {/* <Projects2 /> */}
+            <Projects2 />
             <Projects />
             {/* <Between3/> */}
-            {/* <History /> */}
-            {/* <Expereence/> */}
-            {/* <Movingbar/> */}
+            <History />
+
             {/* <Contact /> */}
-            {/* <Contact2 /> */}
             {/* <Grid/> */}
             
             <div className=' z-50 flex w-full justify-center'>

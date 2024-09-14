@@ -15,9 +15,9 @@ import Movingbar from "./Components/Movingbar";
 import Projects from "./Pages/Projects";
 import Contactbar from "./Components/Contactbar";
 import About from "./Pages/About";
-import Contact2 from "./Pages/Contact2";
+
 import Work from "./Pages/Work";
-import Expereence from "./Pages/Experence";
+
 import Between1 from "./Components/Between1";
 import Between2 from "./Components/Bettween2";
 import History from "./Pages/History";

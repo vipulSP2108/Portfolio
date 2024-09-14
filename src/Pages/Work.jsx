@@ -24,7 +24,6 @@ export default function Work({ imgSources, outlets, noImage = false }) {
     //         ease: 'power3.out',
     //     });
     // })
-
     useEffect(() => {
         const menuItems = menuItemsRef.current;
 
@@ -46,82 +45,85 @@ export default function Work({ imgSources, outlets, noImage = false }) {
                 }
             });
         });
+    }, []);
 
-        // Mouse event handlers
-        const handleMouseOver = (index) => {
-            const item = menuItemsRef.current[index];
-            gsap.to(item.querySelectorAll("p:nth-child(1)"), {
-                top: "-100%",
-                duration: 0.3,
-            });
-            gsap.to(item.querySelectorAll("p:nth-child(2)"), {
-                top: "0%",
-                duration: 0.3,
-            });
-            appendImages(imgSources[index]);
-        };
+    // Append images and animate
+    const appendImages = (src) => {
+        const preview1 = preview1Ref.current;
+        const preview2 = preview2Ref.current;
+        if (!preview1 || !preview2) return;
 
-        const handleMouseOut = (index) => {
-            const item = menuItemsRef.current[index];
-            gsap.to(item.querySelectorAll("p:nth-child(1)"), {
-                top: "0%",
-                duration: 0.3,
-            });
-            gsap.to(item.querySelectorAll("p:nth-child(2)"), {
-                top: "100%",
-                duration: 0.3,
-            });
+        const img1 = document.createElement("img");
+        const img2 = document.createElement("img");
 
-        };
+        img1.src = src;
+        img1.style.clipPath = "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)";
+        img2.src = src;
+        img2.style.clipPath = "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)";
+        preview1.appendChild(img1);
+        preview2.appendChild(img2);
 
-        // Append images and animate
-        const appendImages = (src) => {
-            const preview1 = preview1Ref.current;
-            const preview2 = preview2Ref.current;
-            if (!preview1 || !preview2) return;
-
-            const img1 = document.createElement("img");
-            const img2 = document.createElement("img");
-
-            img1.src = src;
-            img1.style.clipPath = "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)";
-            img2.src = src;
-            img2.style.clipPath = "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)";
-            preview1.appendChild(img1);
-            preview2.appendChild(img2);
-
-            gsap.to([img1, img2], {
-                clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-                duration: 1,
-                ease: 'power3.out',
-                onComplete: () => {
-                    removeExtraImage(preview1);
-                    removeExtraImage(preview2);
-                }
-            });
-        };
-
-        const removeExtraImage = (container) => {
-            while (container.children.length > 10) {
-                container.removeChild(container.firstChild);
+        gsap.to([img1, img2], {
+            clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+            duration: 1,
+            ease: 'power3.out',
+            onComplete: () => {
+                removeExtraImage(preview1);
+                removeExtraImage(preview2);
             }
-        };
+        });
+    };
 
-        // Event listeners
+    const removeExtraImage = (container) => {
+        while (container.children.length > 10) {
+            container.removeChild(container.firstChild);
+        }
+    };
+
+    // Memoized handlers
+    const handleMouseOver = useCallback((index) => {
+        const item = menuItemsRef.current[index];
+        gsap.to(item.querySelectorAll("p:nth-child(1)"), {
+            top: "-100%",
+            duration: 0.3,
+        });
+        gsap.to(item.querySelectorAll("p:nth-child(2)"), {
+            top: "0%",
+            duration: 0.3,
+        });
+        appendImages(imgSources[index]);
+    }, [imgSources]);
+
+    const handleMouseOut = useCallback((index) => {
+        const item = menuItemsRef.current[index];
+        gsap.to(item.querySelectorAll("p:nth-child(1)"), {
+            top: "0%",
+            duration: 0.3,
+        });
+        gsap.to(item.querySelectorAll("p:nth-child(2)"), {
+            top: "100%",
+            duration: 0.3,
+        });
+    }, []);
+
+    useEffect(() => {
+        const menuItems = menuItemsRef.current;
+
+        // Add event listeners
         menuItems.forEach((item, index) => {
             item.addEventListener("mouseover", () => handleMouseOver(index));
             item.addEventListener("mouseout", () => handleMouseOut(index));
         });
 
         // Clean up event listeners
-        return () => {
-            menuItems.forEach((item, index) => {
-                item.removeEventListener("mouseover", () => handleMouseOver(index));
-                item.removeEventListener("mouseout", () => handleMouseOut(index));
-            });
-        };
-    }, []);
-
+        // return () => {
+        //     menuItems.forEach((item, index) => {
+        //         item.removeEventListener("mouseover", () => handleMouseOver(index));
+        //         item.removeEventListener("mouseout", () => handleMouseOut(index));
+        //     });
+        // };
+    }, [handleMouseOver, handleMouseOut]);
+    
     useEffect(() => {
         const handleMouseMove = (e) => {
             gsap.to(priviewRef.current, {
