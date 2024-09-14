@@ -71,7 +71,7 @@ export default function ProjectDetails() {
                 </div>
 
                 <div className='px-48 w-full h-full'>
-                    <img src={ShowCase} alt={'ShowCase'} className='w-full pt-28' />
+                    {/* <img src={ShowCase} alt={'ShowCase'} className='w-full pt-28' /> */}
 
  {/* Overview */}
                     <div className='flex pt-28'>

@@ -108,20 +108,20 @@ export default function About() {
 
 
     return (
-        <div style={{ userSelect: 'none' }} className=' z-0 flex flex-col  px-16 my-12 h-screen'>
+        <div style={{ userSelect: 'none' }} className=' z-0 flex flex-col px-16 my-12 h-screen'>
             <div
                 ref={containerRef}
-                className=' z-30 flex-1 flex flex-col justify-evenly rounded-2xl about-main'
+                className=' z-30 flex-1 flex flex-col justify-evenly rounded-2xl about-main h-full w-full p-[10vh]'
                 id='glasses'
             >
                 <div className=' flex items-center justify-center'>
                     <text style={{ fontFamily: 'Montserrat' }} className=' uppercase text-[#888888]'>Who I am</text>
                 </div>
-                <div className='flex items-center justify-center gap-4'>
-                    <div className=' gap-4 flex flex-col items-end'>
+                <div className=' flex items-center justify-center gap-4 w-full h-full'>
+                    <div className=' gap-4 flex flex-col justify-center items-end w-7/12 h-full'>
                         <div className='gap-4 flex flex-row items-center'>
                             <div
-                                className=' rounded-2xl w-[12rem] h-[11rem] px-3 py-2 flex flex-col justify-between about-aka'
+                                className=' rounded-2xl w-[45%] h-[50%] px-3 py-2 flex flex-col justify-between'
                                 id='glasses'
 
                             >
@@ -131,10 +131,10 @@ export default function About() {
                                 </div>
                             </div>
                             <div
-                                className='  py-3 px-2 rounded-2xl w-[14rem] h-[17rem] flex flex-col justify-between'
+                                className='  py-3 px-2 rounded-2xl w-[55%] h-[58vh] flex flex-col justify-between'
                                 id='glasses'
                                 // bg-[rgb(34,114,239)]
-                                style={{ background: 'rgba(34, 114, 239, 0.9)' }}
+                                // style={{ background: 'rgba(34, 114, 239, 0.9)' }}
                             >
                                 {/* <text style={{fontFamily: 'Montserrat'}} className='font-black'>Vipul Sunil Patil</text>
                             <text style={{ lineHeight: 0.9}} className=' text-[#888888]'>{`Hello there! 👋,`}<br />{`I'm versatile web and app developer, and designer with a passion for crafting engaging and user-friendly digital experiences.`}</text> */}
@@ -148,22 +148,22 @@ export default function About() {
                             </div>
                         </div>
                         <div id=' gasss' className=' about-skills'>
-                            <div className='bg-black rounded-2xl w-[21rem] h-[4rem] flex overflow-hidden'
+                            <div className='bg-black rounded-2xl w-[35vw] h-[11vh] flex overflow-hidden items-center pt-1'
                             // id='glasses'
                             >
                                 <Scroller items={textItems} topbottom='false' direction="left" speed="fast" />
                             </div>
                         </div>
                     </div>
-                    <div className=' flex flex-col gap-4'>
+                    <div className=' flex flex-col justify-center gap-4  w-5/12 h-full'>
                         <div
-                            className=' bg-black rounded-2xl w-[21rem] h-[4rem] flex flex-col justify-center items-center about-quote'
+                            className=' bg-black rounded-2xl w-[100%] h-[11vh] flex flex-col justify-center items-center about-quote'
                         // id='glasses'
                         >
                             <text className=' text-[#888888] mt-1'>'Stay Happy, Not Depressed!'</text>
                         </div>
                         <div
-                            className='rounded-2xl w-[14rem] h-[12rem] about-techstack'
+                            className='rounded-2xl w-[70%] h-[40vh] about-techstack'
                             id='glasses'
                         >
                             <div className=' p-3 flex justify-end h-full overflow-hidden gap-3'>

@@ -11,8 +11,8 @@ const outlets = [
     // { cat: 'WEB', name: "CITES", companyName: "Another Company", category: "Self Challenge" },
     // { cat: 'WEB', name: "Child", companyName: "Yet Another Company", category: "Self Challenge" },
     // { cat: 'APP', name: "Mobo Dashboard", companyName: "Company ABC", category: "Self Challenge" },
-    { cat: 'APP', name: "ArgyleEnigma Labs", companyName: "ArgyleEnigma Labs", category: "Design & Development" },
-    { cat: 'WEB', name: "REEFS Labs", companyName: "ArgyleEnigma Labs", category: "Web Development" }
+    { cat: 'APP', name: "ArgyleEnigma Labs", companyName: "ArgyleEnigma Labs", role: "Design & Development" },
+    { cat: 'WEB', name: "REEFS Labs", companyName: "ArgyleEnigma Labs", role: "Web Development" }
 ];
 
 export default function Projects2() {

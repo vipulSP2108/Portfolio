@@ -209,7 +209,7 @@ export default function Work({ imgSources, projectList, noImage = false, noNavig
                         <span id='name'><p
                             style={{ fontFamily: 'Montserrat', textTransform: 'uppercase', fontWeight: 800, }}
                         >{project.name}</p></span>
-                        <span id='tag'><p>{project.category}</p></span>
+                        <span id='tag'><p>{project.role}</p></span>
                     </div>
                 ))}
 

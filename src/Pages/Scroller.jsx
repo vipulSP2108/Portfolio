@@ -45,7 +45,7 @@ const Scroller = ({ items, direction = 'left', speed = 'fast', topbottom='true' 
             {/* <div className=' self-center bg-white w-3 h-3 rounded-full' /> */}
            </>
           ) : (
-            <img className=' h-10 w-10' key={index} style={{objectFit: 'contain'}} src={item.logo} alt={item.alt || ''} />
+            <img className='  h-[6vh]' key={index} style={{objectFit: 'contain'}} src={item.logo} alt={item.alt || ''} />
           )
         )}
       </div>
