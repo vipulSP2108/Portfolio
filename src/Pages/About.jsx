@@ -178,10 +178,10 @@ export default function About() {
                                 </div>
 
                                 <div className=' opacity-90'>
-                                    <Scroller items={SkillsData} topbottom='true' direction="bottom" speed="slow" />
+                                    {/* <Scroller items={SkillsData} topbottom='true' direction="bottom" speed="slow" /> */}
                                 </div>
                                 <div className=' opacity-90'>
-                                    <Scroller items={SkillsData} topbottom='true' direction="top" speed="slow" />
+                                    {/* <Scroller items={SkillsData} topbottom='true' direction="top" speed="slow" /> */}
                                 </div>
                             </div>
 
