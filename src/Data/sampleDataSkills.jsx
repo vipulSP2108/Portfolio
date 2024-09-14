@@ -26,7 +26,7 @@ import canva from '../assets/images/canva.png';
 import blender from '../assets/images/blender.png';
 
 
-const SkillsData = [
+export const sampleDataSkills = [
 
     // Programming Languages
     {
@@ -231,5 +231,3 @@ const SkillsData = [
         textColor_second: "text-zinc-950",
     }
 ];
-
-export default SkillsData;

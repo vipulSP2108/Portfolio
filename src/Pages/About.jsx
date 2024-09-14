@@ -7,8 +7,9 @@ import react from '../assets/react.png';
 import tailwindcss from '../assets/tailwindcss.svg';
 import Scroller from './Scroller';
 import gsap from "gsap";
-import SkillsData from '../data/SkillsData';
+
 import { FiExternalLink } from 'react-icons/fi';
+import { sampleDataSkills } from '../Data/sampleDataSkills';
 
 
 const textItems = [
@@ -178,10 +179,10 @@ export default function About() {
                                 </div>
 
                                 <div className=' opacity-90'>
-                                    {/* <Scroller items={SkillsData} topbottom='true' direction="bottom" speed="slow" /> */}
+                                    <Scroller items={sampleDataSkills} topbottom='true' direction="bottom" speed="slow" />
                                 </div>
                                 <div className=' opacity-90'>
-                                    {/* <Scroller items={SkillsData} topbottom='true' direction="top" speed="slow" /> */}
+                                    <Scroller items={sampleDataSkills} topbottom='true' direction="top" speed="slow" />
                                 </div>
                             </div>
 
