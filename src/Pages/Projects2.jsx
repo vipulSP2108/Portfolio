@@ -8,17 +8,10 @@ import Cities from '../assets/Cities.png';
 import RentHouse from '../assets/RentHouse.png';
 import MoboDashboard from '../assets/MoboDashboard.png';
 
-
+import { sampleDataNew } from '../Data/sampleDataNew';
 import './Home.css';
 
 const imgSources = [SparshBhashi, OutsIIT, Cities, RentHouse, MoboDashboard];
-const outlets = [
-    { cat: 'EMB', name: "SparshBhashi", companyName: "Company XYZ", category: "Team Lead" },
-    { cat: 'APP', name: "OutsIIT", companyName: "Company XYZ", category: "Team Lead" },
-    { cat: 'WEB', name: "Cities", companyName: "Another Company", category: "Self Challenge" },
-    { cat: 'WEB', name: "Rent House", companyName: "Yet Another Company", category: "Self Challenge" },
-    { cat: 'APP', name: "Mobo Dashboard", companyName: "Company ABC", category: "Self Challenge" },
-];
 
 export default function Projects2() {
     return (
@@ -35,7 +28,7 @@ export default function Projects2() {
                 <div style={{
                     padding: '0 4em',
                 }}>
-                    <Work imgSources={imgSources} outlets={outlets} />
+                    <Work projectList={sampleDataNew} noNavigation={true}/>
                     <div id='info2' className=' flex flex-row gap-3 mt-3'>
                         <div className=' w-5 h-5 bg-white rounded-full' />
                         <div className=' w-5 h-5 bg-white rounded-full' />

@@ -30,7 +30,7 @@ export default function Projects2() {
                 <div style={{
                     padding: '0 4em',
                 }}>
-                    <Work imgSources={imgSources} outlets={outlets} noImage={true}/>
+                    <Work imgSources={imgSources} projectList={outlets} noImage={true}/>
                     <div id='info2' className=' flex flex-row gap-3 mt-3'>
                         {/* <div className=' w-5 h-5 bg-white rounded-full' />
                         <div className=' w-5 h-5 bg-white rounded-full' />

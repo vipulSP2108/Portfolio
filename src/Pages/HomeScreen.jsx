@@ -54,14 +54,6 @@ function HomeScreen() {
 
             {/* <Contact /> */}
             {/* <Grid/> */}
-            
-            <div className=' z-50 flex w-full justify-center'>
-                {sampleDataNew.map((project, index) => (
-                    <div className=' z-0' key={index} onClick={() => handleClick(project)}>
-                        <h3 className=' z-50'>{project.name}</h3>
-                    </div>
-                ))}
-            </div>
         </div>
     );
 }

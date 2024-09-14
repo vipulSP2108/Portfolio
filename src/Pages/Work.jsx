@@ -3,10 +3,11 @@ import './Home.css';
 // import './Work.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useNavigate } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Work({ imgSources, outlets, noImage = false }) {
+export default function Work({ imgSources, projectList, noImage = false, noNavigation = false }) {
     const [hoveredItem, setHoveredItem] = useState(null);
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
     const menuRef = useRef(null);
@@ -15,6 +16,14 @@ export default function Work({ imgSources, outlets, noImage = false }) {
     const preview2Ref = useRef(null);
     const priviewRef = useRef(null);
 
+    const navigate = useNavigate();
+
+    const handleClick = (project) => {
+        if (!noNavigation){
+            return null
+        }
+        navigate('/ProjectDetails', { state: { project } });
+    };
 
     // const menu = menuRef.current;
     // menu.addEventListener('mouseout', function () {
@@ -91,8 +100,8 @@ export default function Work({ imgSources, outlets, noImage = false }) {
             top: "0%",
             duration: 0.3,
         });
-        appendImages(imgSources[index]);
-    }, [imgSources]);
+        appendImages(projectList[index].VideoShowCase);
+    }, [projectList]);
 
     const handleMouseOut = useCallback((index) => {
         const item = menuItemsRef.current[index];
@@ -179,7 +188,7 @@ export default function Work({ imgSources, outlets, noImage = false }) {
             //     padding:'0 4em',
             // }}
             >
-                {outlets.map((outlet, index) => (
+                {projectList.map((project, index) => (
                     <div
                         ref={el => menuItemsRef.current[index] = el}
                         id='menuitem'
@@ -193,13 +202,14 @@ export default function Work({ imgSources, outlets, noImage = false }) {
                             cursor: 'pointer',
                         }}
                         className='flex justify-between'
+                        onClick={() => handleClick(project)}
                     >
-                        {/* <span id='info'><p>{outlet.cat}</p></span> */}
-                        <span id='info2'>{outlet.cat}</span>
+                        {/* <span id='info'><p>{project.cat}</p></span> */}
+                        <span id='info2'>{project.cat}</span>
                         <span id='name'><p
                             style={{ fontFamily: 'Montserrat', textTransform: 'uppercase', fontWeight: 800, }}
-                        >{outlet.name}</p></span>
-                        <span id='tag'><p>{outlet.category}</p></span>
+                        >{project.name}</p></span>
+                        <span id='tag'><p>{project.category}</p></span>
                     </div>
                 ))}
 
