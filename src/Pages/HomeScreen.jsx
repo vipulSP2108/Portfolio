@@ -1,5 +1,5 @@
 // Home.js
-import React from 'react';
+import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // import { COLORS } from "./style/colors";
@@ -39,15 +39,17 @@ function HomeScreen() {
     const handleClick = (project) => {
         navigate('/ProjectDetails', { state: { project } });
     };
-    
+
+    const aboutRef = useRef(null);
+
     return (
         <div>
-            <Navbar/>
+            <Navbar />
             <Contactbar />
             <Home />
             <Movingbar />
             {/* <Between1 /> */}
-            <About />
+            <About ref={aboutRef} />
             <Between2 />
             <Projects2 />
             <Projects />
@@ -56,7 +58,7 @@ function HomeScreen() {
 
             {/* <Contact /> */}
             {/* <Grid/> */}
-            <FooterCostom/>
+            <FooterCostom />
         </div>
     );
 }

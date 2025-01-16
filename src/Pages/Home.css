@@ -1,3 +1,25 @@
+/* Add this in your global CSS file or a specific CSS module */
+@keyframes dotAnimation {
+  0% {
+    content: ".";
+  }
+  33% {
+    content: "..";
+  }
+  66% {
+    content: "...";
+  }
+  100% {
+    content: ".";
+  }
+}
+
+.dot-animation::after {
+  content: ".";
+  animation: dotAnimation 1.5s steps(1, end) infinite;
+}
+
+
 .gradient-text {
   /* background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #00ff00, #ff0000, #00ff00, #0000ff); */
   background: linear-gradient(45deg, #65DCF8, #6EB7FF, #005FEA, #005FEA, #504FFB);

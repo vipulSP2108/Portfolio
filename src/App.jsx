@@ -37,16 +37,20 @@ export default function App() {
 
   return (
     <HashRouter>
-      <div style={{ fontFamily: "Zain" }} className=' z-0 cursor-none w-full text-2xl text-white bg-[#171C24] ' >
+      <div style={{ fontFamily: "Zain" }} className=' overscroll-none z-0 cursor-none w-full text-2xl text-white bg-[#171C24] ' >
         <GridBg />
         <Cursor />
         <ScrollToTop />
 
-      <Routes>
+<div className="overflow-x-hidden">
+<Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/ProjectDetails" element={<ProjectDetails />} />
+        <Route path="/about" element={<About />} />
         <Route path="/Skills" element={<Skills />} />
       </Routes>
+</div>
+
 
       </div>
 

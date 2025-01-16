@@ -1,38 +1,39 @@
-// import React from 'react'
-// import '../App.css';
-// import { FaArrowUp } from 'react-icons/fa6';
-
-// export default function Navbar() {
-//   return (
-//     <>
-
-// 
-//       </div>
-
-//       <div className=' fixed z-50 p-[7px] top-12 left-10 justify-between rounded-full'
-//         id='glasses'
-//       >
-//         <div className=' w-20 rounded-full h-9 bg-black'></div>
-//       </div >
-//       <div className=' fixed z-50 p-[7px] top-12 right-10 justify-between rounded-full'
-//         id='glasses'
-//       >
-//         <div className='bg-[#2272EF] w-20 rounded-full h-9 flex items-center justify-center'>
-//           <FaArrowUp color='#fff' />
-//         </div>
-//       </div >
-
-//     </>
-
-
-//   )
-// }
-
-
 import React, { useState, useEffect } from 'react';
-import { FaArrowUp } from 'react-icons/fa6';
-import './Navbar.css'; // Import the CSS file
+import { FaArrowUp, FaUser } from 'react-icons/fa6';
+import './Navbar.css';
 import logo from '../assets/logo.png';
+import { MagneticIcon } from './MagneticIcon';
+import { FaInstagram, FaLinkedinIn, FaGithub } from 'react-icons/fa6';
+
+const iconMap = {
+  FaInstagram: FaInstagram,
+  FaLinkedinIn: FaLinkedinIn,
+  FaGithub: FaGithub,
+};
+
+const ContactInfo = [
+  {
+    iconName: "FaInstagram",
+    size: "25",
+    background: "linear-gradient(135deg, #8316FA, #FC17CA, #FDC61C)",
+    scale: 0.7,
+    link: "https://instagram.com/vipulsp_21?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
+  },
+  {
+    iconName: "FaLinkedinIn",
+    size: "25",
+    background: "#1576B4",
+    scale: 0.7,
+    link: 'https://www.linkedin.com/in/vipul-patil-b76a65250',
+  },
+  {
+    iconName: "FaGithub",
+    size: "28",
+    background: "#090909",
+    scale: 0.7,
+    link: "https://github.com/vipulSP2108",
+  },
+];
 
 export default function Navbar() {
   const [scrollingUp, setScrollingUp] = useState(true);
@@ -42,26 +43,23 @@ export default function Navbar() {
     const handleScroll = () => {
       const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
       if (currentScrollTop > lastScrollTop) {
-        // Scrolling down
-        setScrollingUp(false);
+        setScrollingUp(false); // Scrolling down
       } else {
-        // Scrolling up
-        setScrollingUp(true);
+        setScrollingUp(true);  // Scrolling up
       }
       setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop); // For Mobile or negative scrolling
     };
 
     window.addEventListener('scroll', handleScroll);
-
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollTop]);
 
   return (
     <>
       <div className={`navbar ${scrollingUp ? 'show' : 'hide'} fixed z-50 p-[7px] top-12 right-10 justify-between rounded-full`} id='glasses'>
-        <div style={{ fontFamily: "Zain" }} className=' bg-white flex text-black p-1 gap-6 rounded-full items-center'>
+        <div style={{ fontFamily: "Zain" }} className='bg-white flex text-black p-1 gap-6 rounded-full items-center'>
           <div className='w-20 rounded-full h-9 p-1 bg-white overflow-hidden'>
-          <img className='' src={logo} alt="Logo" />
+            <img className='' src={logo} alt="Logo" />
           </div>
           <div className='text-lg text-[#131821]'>About</div>
           <div className='text-lg text-[#131821]'>Work</div>
@@ -72,37 +70,21 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+
       {!scrollingUp && (
-        <>
-          <div className={`navbar ${scrollingUp ? 'hide' : 'show'}  fixed z-50 p-[7px] top-12 left-10 justify-between rounded-full`} id='glasses'>
-          <div className='w-20 rounded-full h-9 p-1 bg-white overflow-hidden'>
-          <img className='' src={logo} alt="Logo" />
-          </div>
-          </div>
-          <div className={`navbar ${scrollingUp ? 'hide' : 'show'}  fixed z-50 p-[7px] top-12 right-10 justify-between rounded-full`} id='glasses'>
-            <div className='bg-[#2272EF] w-20 rounded-full h-9 flex items-center justify-center'>
-              <FaArrowUp color='#fff' />
-            </div>
-          </div>
-        </>
+        <div className='fixed z-50 bottom-12 right-14 rounded-2xl' style={{ gap: '1px' }} id='glasses'>
+          {ContactInfo.map((item, index) => {
+            const IconComponent = iconMap[item.iconName];
+            return (
+              <div key={index} style={{ transform: `scale(${0.7})` }} className='p-[7px] justify-between rounded-full'>
+                <a target="_blank" rel="noopener noreferrer">
+                  <MagneticIcon icon={IconComponent} size={item.size} background={item.background} />
+                </a>
+              </div>
+            );
+          })}
+        </div>
       )}
     </>
   );
 }
-
-
-
-
-// <>
-//   <div className='p-[7px] fixed z-50 top-12 px-10 left-10 flex rounded-full ' id='glasses'>
-//     <div className=' w-20 rounded-full h-8 bg-black'></div>
-//   </div>
-//   <div className='p-[7px] fixed z-50 top-12 right-10 text-right '
-//   // id='glasses'
-//   >
-//     <div className=' -mb-1 text-lg text-white'>About</div>
-//     <div className=' -mb-1 text-lg text-white'>Work</div>
-//     <div className=' -mb-1 text-lg text-white'>Services</div>
-//     <div className=' -mb-1 text-lg text-white'>Contact</div>
-//   </div>
-// </>

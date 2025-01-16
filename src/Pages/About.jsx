@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import '../App.css';
-import imageMy from '../assets/My.jpg';
+import imageMy from '../assets/My4.jpg';
 import html from '../assets/html.png';
 import javascriptweb from '../assets/javascriptweb.png';
 import react from '../assets/react.png';
@@ -60,6 +60,17 @@ const image2TechItems = [
 
 
 export default function About() {
+
+    const shuffleArray = (array) => {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+        }
+        return array;
+    };
+
+    const randomizedSkills = shuffleArray([...sampleDataSkills]);
+
     const containerRef = useRef(null);
 
     // main - scale
@@ -123,7 +134,7 @@ export default function About() {
                 id='glasses'
             >
                 <div className=' flex items-center justify-center'>
-                    <text style={{ fontFamily: 'Montserrat' }} className=' uppercase text-[#888888]'>Who I am</text>
+                    <text style={{ fontFamily: 'Montserrat' }} className=' uppercase text-[#888888] mb-10'>Who I am</text>
                 </div>
                 <div className=' flex items-center justify-center gap-4 w-full h-full'>
                     <div className=' gap-4 flex flex-col justify-center items-end w-7/12 h-full'>
@@ -131,26 +142,30 @@ export default function About() {
                             <div
                                 className=' rounded-2xl w-[45%] h-[50%] px-3 py-2 flex flex-col justify-between'
                                 id='glasses'
-
                             >
                                 <div>
-                                    <text style={{ fontFamily: 'Montserrat' }} className='font-black'>AKA.</text>
-                                    <text className=' text-2xl font-black text-[#2272EF]'> Aayush.</text>
+                                    <div>
+                                        <text style={{ fontFamily: 'Montserrat' }} className='font-black'>AKA.</text>
+                                        <text className=' text-2xl font-black text-[#2272EF]'> Aayush.</text>
+                                    </div>
+                                    <h1 style={{ lineHeight: '20px' }} className="text-xl text-[#888888] ">
+                                        I am currently pursuing a B.Tech in Computer Science and Engineering at IIT Gandhinagar. With two years of experience in web and app development, I have honed my skills particularly in React and React Native.
+                                    </h1>
                                 </div>
                             </div>
                             <div
-                                className='  py-3 px-2 rounded-2xl w-[55%] h-[58vh] flex flex-col justify-between'
+                                className=' rounded-2xl w-[55%] h-[58vh] flex flex-col justify-between'
                                 id='glasses'
-                                // bg-[rgb(34,114,239)]
-                                // style={{ background: 'rgba(34, 114, 239, 0.9)' }}
+                            // bg-[rgb(34,114,239)]
+                            // style={{ background: 'rgba(34, 114, 239, 0.9)' }}
                             >
                                 {/* <text style={{fontFamily: 'Montserrat'}} className='font-black'>Vipul Sunil Patil</text>
                             <text style={{ lineHeight: 0.9}} className=' text-[#888888]'>{`Hello there! 👋,`}<br />{`I'm versatile web and app developer, and designer with a passion for crafting engaging and user-friendly digital experiences.`}</text> */}
 
-                                <div className=' overflow-hidden w-full h-[80%] rounded-2xl'>
-                                    <img className='' src={imageMy} alt="My Image" />
+                                <div className=' overflow-hidden h-full w-full rounded-xl'>
+                                    <img className=' h-full w-full' src={imageMy} alt="My Image" />
                                 </div>
-                                <div className=' overflow-hidden w-full h-[20%] flex items-center p-1'>
+                                <div className=' absolute bottom-0 left-2 text-3xl font-black overflow-hidden w-full h-[20%] flex items-center p-1'>
                                     <text>Vipul Sunil Patil</text>
                                 </div>
                             </div>
@@ -188,7 +203,7 @@ export default function About() {
                                 </div>
 
                                 <div className=' opacity-90'>
-                                    <Scroller items={sampleDataSkills} topbottom='true' direction="bottom" speed="slow" />
+                                    <Scroller items={randomizedSkills} topbottom='true' direction="bottom" speed="slow" />
                                 </div>
                                 <div className=' opacity-90'>
                                     <Scroller items={sampleDataSkills} topbottom='true' direction="top" speed="slow" />

@@ -41,7 +41,7 @@ export default function Home() {
 
       const ReactElement = ReactTextRef.current;
 
-      const animationDuration = 5; // Random duration between 5s and 15s
+      const animationDuration = 2; // Random duration between 5s and 15s
       const keyframes = `@keyframes ReactTextAnimation { ` +
         `0% { background-position: 0% 0%; } ` +
         `25% { background-position: 25% 25%; } ` +
@@ -112,7 +112,7 @@ export default function Home() {
             ref={ReactTextRef}
             style={{
               // display: 'inline-block', //
-              background: 'linear-gradient(45deg, #65DCF8, #6EB7FF, #005FEA, #504FFB)',
+              background: 'linear-gradient(45deg, rgb(0, 255, 255),  rgb(0, 0, 255))',
               // backgroundClip: 'text', //
               WebkitBackgroundClip: 'text',
               // color: 'transparent',
