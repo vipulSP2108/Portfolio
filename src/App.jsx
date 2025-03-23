@@ -33,25 +33,35 @@ import { sampleDataNew } from "./Data/sampleDataNew";
 import { Routes, Route, HashRouter } from "react-router-dom";
 import ScrollToTop from "./Components/ScrollToTop";
 import Skills from "./Components/Skills";
+import ConnectSection from "./Components/ConnectSection";
+import LocomotiveScroll from 'locomotive-scroll';
+import FooterCostom from "./Components/FooterCostom";
+
+
 export default function App() {
+
+  const locomotiveScroll = new LocomotiveScroll();
 
   return (
     <HashRouter>
       <div style={{ fontFamily: "Zain" }} className=' overscroll-none z-0 cursor-none w-full text-2xl text-white bg-[#171C24] ' >
         <GridBg />
         <Cursor />
-        <ScrollToTop />
+        {/* <ScrollToTop /> */}
 
-<div className="overflow-x-hidden">
-<Routes>
-        <Route path="/" element={<HomeScreen />} />
-        <Route path="/ProjectDetails" element={<ProjectDetails />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/Skills" element={<Skills />} />
-      </Routes>
-</div>
+        <div className="overflow-x-hidden">
+          <Routes>
+            <Route path="/" element={<HomeScreen />} />
+            <Route path="/ProjectDetails" element={<ProjectDetails />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/Skills" element={<Skills />} />
+          </Routes>
+          <ConnectSection />
+          
+        </div>
 
 
+        
       </div>
 
     </HashRouter>

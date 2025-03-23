@@ -35,7 +35,7 @@ export default function Projects2() {
                         {/* <div className=' w-5 h-5 bg-white rounded-full' />
                         <div className=' w-5 h-5 bg-white rounded-full' />
                         <div className=' w-5 h-5 bg-white rounded-full' /> */}
-                        <text>yeh dil maange more!!!</text>
+                        {/* <text>yeh dil maange more!!!</text> */}
                     </div>
                 </div>
             </div>

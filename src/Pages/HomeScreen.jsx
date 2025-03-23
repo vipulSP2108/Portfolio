@@ -30,6 +30,7 @@ import Project from '../assets/Project.png';
 import OutsIIT from '../assets/OutsIIT.png';
 import CitiesDevGame from '../assets/Cities.png';
 import ChildSafetyMonitoring from '../assets/Cities.png';
+import ConnectSection from "../Components/ConnectSection";
 
 import { sampleDataNew } from '../Data/sampleDataNew';
 
@@ -47,7 +48,7 @@ function HomeScreen() {
             <Navbar />
             <Contactbar />
             <Home />
-            <Movingbar />
+            {/* <Movingbar /> */}
             {/* <Between1 /> */}
             <About ref={aboutRef} />
             <Between2 />
@@ -58,7 +59,7 @@ function HomeScreen() {
 
             {/* <Contact /> */}
             {/* <Grid/> */}
-            <FooterCostom />
+            {/* <FooterCostom /> */}
         </div>
     );
 }

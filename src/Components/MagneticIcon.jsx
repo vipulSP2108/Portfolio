@@ -9,7 +9,7 @@ export const MagneticIcon = ({ icon: Icon, size, background = 'transparent' }) =
         const x = e.clientX - rect.left - rect.width / 2;
         const y = e.clientY - rect.top - rect.height / 2;
         // Increase the scaling factors to make the magnetic field larger
-        setTransform({ x: x * 1, y: y * 2 }); // Adjust these values as needed
+        setTransform({ x: x * 3, y: y * 3}); // Adjust these values as needed
     };
 
     const handleMouseEnter = () => {
@@ -31,7 +31,7 @@ export const MagneticIcon = ({ icon: Icon, size, background = 'transparent' }) =
                 style={{
                     background: hover && background,
                     borderWidth: 1,
-                    transition: 'transform 0.3s cubic-bezier(.25,.1,.25,1.5)', // Adjust transition for bounciness
+                    transition: 'transform 0.4s cubic-bezier(.25,.1,.25,1.5)', // Adjust transition for bounciness
                     transform: `translate(${transform.x}px, ${transform.y}px) scale(${hover ? 1.2 : 1})` // Increase scale for hover effect
                 }}
             >
