@@ -4,9 +4,6 @@ const divideHeight = 4;
 
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import './Home.css';
-import Cursor from '../Components/Cursor';
-import GridBg from '../Components/GridBg';
-import Navbar from '../Components/Navbar';
 import { GlobalStateContext } from '../Context/GlobalStateProvider';
 
 export default function Home() {
@@ -93,18 +90,13 @@ export default function Home() {
     <div
       className='z-0  flex flex-col items-center justify-center w-full h-screen text-center'
     >
-      {/* <GridBg /> */}
-      {/* <Cursor /> */}
-      {/* <Navbar /> */}
-
       <div className=' z-30'>
-        <div style={{ fontFamily: "Lilita One" }} className=' text-xl font-black text-[#888888]'>
+        <div style={{ fontFamily: "Montserrat" }} className=' text-lg md:text-xl tracking-widest font-normal text-[#888888]'>
           NAMASKAR !!!
         </div>
       </div>
       <div
         style={{ fontFamily: "Zain" }} // Zain
-        // style={{ zIndex: 1, }}
         className=' z-30 w-screen  text-8xl font-black'>
         <div>Together, Let’s</div>
         <div>
@@ -126,16 +118,6 @@ export default function Home() {
           </span> to Your Vision!
         </div>
       </div>
-      {/* Montserrat */}
-      {/* <div style={{ fontFamily: "Montserrat" }} className=' text-xl font-normal text-[#888888]'>
-          <div>
-            Where Your Ideas
-            <span> React</span>
-          </div>
-          <div>with Creative Code</div>
-        </div>
-      </div> */}
-
     </div>
   );
 }

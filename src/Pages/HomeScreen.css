@@ -1,0 +1,18 @@
+/* CSS to hide the Contactbar on mobile */
+#show-on-tablet-laptop {
+    display: block;
+}
+
+/* For devices smaller than 600px (mobile), hide Contactbar */
+@media (max-width: 600px) {
+    #show-on-tablet-laptop {
+        display: none;
+    }
+}
+
+/* For devices between 600px and 1024px (tablet/laptop), show Contactbar */
+@media (min-width: 600px) and (max-width: 1024px) {
+    #show-on-tablet-laptop {
+        display: block;
+    }
+}

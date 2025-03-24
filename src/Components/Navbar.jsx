@@ -72,7 +72,9 @@ export default function Navbar() {
       </div>
 
       {!scrollingUp && (
-        <div className='fixed z-50 bottom-12 right-14 rounded-2xl' style={{ gap: '1px' }} id='glasses'>
+        <div className='fixed z-50 bottom-12 right-14 rounded-2xl' style={{ gap: '1px' }} >
+          {/* 
+           <div className='fixed z-50 bottom-12 right-14 rounded-2xl' style={{ gap: '1px' }} id='glasses'>
           {ContactInfo.map((item, index) => {
             const IconComponent = iconMap[item.iconName];
             return (
@@ -82,7 +84,14 @@ export default function Navbar() {
                 </a>
               </div>
             );
-          })}
+          })} 
+           </div>*/}
+          <div >
+          {/* textOrientation: 'upright', */}
+            <text style={{fontFamily:'Montserrat', writingMode: 'sideways-lr'}} className=' text-[#888888] uppercase text-sm font-medium pr-2'>Move to 
+              <span className=' text-[#fff] font-bold'>  Top</span>
+            </text>
+          </div>
         </div>
       )}
     </>

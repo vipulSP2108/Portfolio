@@ -1,5 +1,5 @@
 // Home.js
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // import { COLORS } from "./style/colors";
@@ -33,6 +33,10 @@ import ChildSafetyMonitoring from '../assets/Cities.png';
 import ConnectSection from "../Components/ConnectSection";
 
 import { sampleDataNew } from '../Data/sampleDataNew';
+import NavbarBottom from '../Components/NavbarBottom';
+import NavbarTop from '../Components/NavbarTop';
+
+import './HomeScreen.css';
 
 function HomeScreen() {
     const navigate = useNavigate();
@@ -43,10 +47,33 @@ function HomeScreen() {
 
     const aboutRef = useRef(null);
 
+    const [isTabletOrLaptop, setIsTabletOrLaptop] = useState(true);
+
+    const checkScreenSize = () => {
+        if (window.innerWidth >= 600) {
+            setIsTabletOrLaptop(true); // Show Contactbar
+        } else {
+            setIsTabletOrLaptop(false); // Hide Contactbar
+        }
+    };
+
+    // Set the initial screen size on component mount
+    useEffect(() => {
+        checkScreenSize(); // Initial check
+        window.addEventListener("resize", checkScreenSize); // Update on window resize
+
+        return () => {
+            window.removeEventListener("resize", checkScreenSize); // Clean up the event listener
+        };
+    }, []);
+
     return (
         <div>
-            <Navbar />
-            <Contactbar />
+            {/* <Navbar /> */}
+            <NavbarBottom />
+            <NavbarTop />
+            {isTabletOrLaptop && <Contactbar />}
+            {/* <Contactbar id="show-on-tablet-laptop" /> */}
             <Home />
             {/* <Movingbar /> */}
             {/* <Between1 /> */}
