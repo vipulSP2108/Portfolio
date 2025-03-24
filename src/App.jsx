@@ -36,17 +36,23 @@ import Skills from "./Components/Skills";
 import ConnectSection from "./Components/ConnectSection";
 import LocomotiveScroll from 'locomotive-scroll';
 import FooterCostom from "./Components/FooterCostom";
+import { useContext } from "react";
+import { GlobalStateContext } from "./Context/GlobalStateProvider";
 
 
 export default function App() {
 
   const locomotiveScroll = new LocomotiveScroll();
+  const { isTabletOrLaptop, setIsTabletOrLaptop } = useContext(GlobalStateContext);
+
 
   return (
     <HashRouter>
       <div style={{ fontFamily: "Zain" }} className=' overscroll-none z-0 cursor-none w-full text-2xl text-white bg-[#171C24] ' >
         <GridBg />
-        <Cursor />
+        {isTabletOrLaptop && <Cursor />}
+
+
         {/* <ScrollToTop /> */}
 
         <div className="overflow-x-hidden">
@@ -57,11 +63,11 @@ export default function App() {
             <Route path="/Skills" element={<Skills />} />
           </Routes>
           <ConnectSection />
-          
+
         </div>
 
 
-        
+
       </div>
 
     </HashRouter>

@@ -1,5 +1,5 @@
 // Home.js
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // import { COLORS } from "./style/colors";
@@ -37,6 +37,7 @@ import NavbarBottom from '../Components/NavbarBottom';
 import NavbarTop from '../Components/NavbarTop';
 
 import './HomeScreen.css';
+import { GlobalStateContext } from '../Context/GlobalStateProvider';
 
 function HomeScreen() {
     const navigate = useNavigate();
@@ -47,7 +48,8 @@ function HomeScreen() {
 
     const aboutRef = useRef(null);
 
-    const [isTabletOrLaptop, setIsTabletOrLaptop] = useState(true);
+    const {isTabletOrLaptop, setIsTabletOrLaptop} = useContext(GlobalStateContext);
+    // const [isTabletOrLaptop, setIsTabletOrLaptop] = useState(true);
 
     const checkScreenSize = () => {
         if (window.innerWidth >= 600) {
@@ -77,7 +79,7 @@ function HomeScreen() {
             <Home />
             {/* <Movingbar /> */}
             {/* <Between1 /> */}
-            <About ref={aboutRef} />
+            {isTabletOrLaptop && <About ref={aboutRef} />}
             <Between2 />
             <Projects2 />
             <Projects />
