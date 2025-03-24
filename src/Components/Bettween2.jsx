@@ -26,12 +26,12 @@ export default function Between2() {
 
     return (
         <div className='flex flex-col justify-center items-center py-36 gap-4'>
-            <div className='z-30 flex items-center justify-center'>
+            <div className='z-30 flex items-center justify-center text-lg md:text-xl tracking-widest'>
                 <text style={{fontFamily:'Montserrat'}} className='text-[#888888] uppercase'>Moto</text>
             </div>
             <div  className='z-30 flex flex-col items-center justify-center text'>
-                <p className='text-7xl font-black'>Design the experience,</p>
-                <p className='text-7xl font-black'>develop the future!</p>
+                <p className='text-7xl md:text-8xl font-black'>Design the experience,</p>
+                <p className='text-7xl md:text-8xl font-black'>develop the future!</p>
             </div>
         </div>
     );

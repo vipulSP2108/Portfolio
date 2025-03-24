@@ -39,6 +39,16 @@ import NavbarTop from '../Components/NavbarTop';
 import './HomeScreen.css';
 import { GlobalStateContext } from '../Context/GlobalStateProvider';
 import AboutPhone from './AboutPhone';
+import Projects2Phone from './Projects2Phone';
+
+const outlets = [
+    // { cat: 'APP', name: "OutsIIT", companyName: "Company XYZ", category: "Team Lead" },
+    // { cat: 'WEB', name: "CITES", companyName: "Another Company", category: "Self Challenge" },
+    // { cat: 'WEB', name: "Child", companyName: "Yet Another Company", category: "Self Challenge" },
+    // { cat: 'APP', name: "Mobo Dashboard", companyName: "Company ABC", category: "Self Challenge" },
+    { cat: 'APP', name: "ArgyleEnigma Labs", companyName: "ArgyleEnigma Labs", role: "Design & Development" },
+    { cat: 'WEB', name: "REEFS Labs", companyName: "ArgyleEnigma Labs", role: "Web Development" }
+];
 
 function HomeScreen() {
     const navigate = useNavigate();
@@ -49,7 +59,7 @@ function HomeScreen() {
 
     const aboutRef = useRef(null);
 
-    const {isTabletOrLaptop, setIsTabletOrLaptop} = useContext(GlobalStateContext);
+    const { isTabletOrLaptop, setIsTabletOrLaptop } = useContext(GlobalStateContext);
     // const [isTabletOrLaptop, setIsTabletOrLaptop] = useState(true);
 
     const checkScreenSize = () => {
@@ -71,7 +81,7 @@ function HomeScreen() {
     }, []);
 
     return (
-        <div style={{userSelect: "none" }}>
+        <div style={{ userSelect: "none" }}>
             {/* <Navbar /> */}
             <NavbarBottom />
             <NavbarTop />
@@ -80,13 +90,13 @@ function HomeScreen() {
             <Home />
             {/* <Movingbar /> */}
             {/* <Between1 /> */}
-            {isTabletOrLaptop && <About ref={aboutRef} />}
-            <AboutPhone ref={aboutRef} />
-            <Between2 />
-            <Projects2 />
-            <Projects />
+            {/* {isTabletOrLaptop && } */}
+            {isTabletOrLaptop ? <About ref={aboutRef} /> : <AboutPhone ref={aboutRef} />}
+            {isTabletOrLaptop && <Between2 />}
+            {isTabletOrLaptop ? <Projects2 /> : <Projects2Phone textcont={'Explore Work'} sampleData={sampleDataNew} />}
+            {isTabletOrLaptop && <Projects />}
             {/* <Between3/> */}
-            <History />
+            {isTabletOrLaptop ? <History /> : <Projects2Phone textcont={'History as Devloper'} sampleData={outlets} />}
 
             {/* <Contact /> */}
             {/* <Grid/> */}

@@ -49,6 +49,14 @@ export default function App() {
   return (
     <HashRouter>
       <div style={{ fontFamily: "Zain", userSelect: "none" }} className=' overscroll-none z-0 cursor-none w-full text-2xl text-white bg-[#171C24] ' >
+
+        {isTabletOrLaptop  ? null :
+          <div style={{ background: `linear-gradient(0deg, transparent 5%, #171C24 95%)` }} className="z-40 fixed h-36 md:h-20 w-full " />
+        }
+        {isTabletOrLaptop ? null :
+          <div style={{ background: `linear-gradient(0deg, transparent 5%, #171C24 95%)` }} className="z-40 fixed bottom-0 rotate-180 h-36 md:h-20 w-full " />
+        }
+
         <GridBg />
         {isTabletOrLaptop && <Cursor />}
 
