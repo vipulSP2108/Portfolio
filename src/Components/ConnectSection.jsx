@@ -35,7 +35,7 @@ const ConnectSection = () => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="z-30 font-semibold text-4xl md:text-3xl text-gray-200 hover:text-red-500"
+                className="z-30 font-semibold text-3xl md:text-3xl text-gray-200 hover:text-red-500"
               >
                 {link.name}
               </a>
@@ -51,7 +51,7 @@ const ConnectSection = () => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="z-30 font-semibold text-4xl md:text-3xl text-gray-200 hover:text-red-500"
+                className="z-30 font-semibold text-3xl md:text-3xl text-gray-200 hover:text-red-500"
               >
                 {link.name}
               </a>

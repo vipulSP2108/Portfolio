@@ -6,18 +6,19 @@ import MoboDashboard from '../assets/MoboDashboard.png';
 import './Home.css';
 import WorkMobo from './WorkMobo';
 import { GlobalStateContext } from '../Context/GlobalStateProvider';
+import { Experience } from '../Data/Experience';
 
 const imgSources = [imageMy];
-const outlets = [
-    // { cat: 'APP', name: "OutsIIT", companyName: "Company XYZ", category: "Team Lead" },
-    // { cat: 'WEB', name: "CITES", companyName: "Another Company", category: "Self Challenge" },
-    // { cat: 'WEB', name: "Child", companyName: "Yet Another Company", category: "Self Challenge" },
-    // { cat: 'APP', name: "Mobo Dashboard", companyName: "Company ABC", category: "Self Challenge" },
-    { cat: 'IOS', name: "Banao Technologies", companyName: "Banao Technologies", role: "React Native IOS Devloper" },
-    { cat: 'APP', name: "Institute Building", companyName: "Institute Building", role: "Overall Lead" },
-    { cat: 'WEB', name: "REEFS Labs", companyName: "REEFS Labs", role: "Web Development" },
-    { cat: 'APP', name: "ArgyleEnigma Labs", companyName: "ArgyleEnigma Labs", role: "Design & Development" },
-];
+// const outlets = [
+//     // { cat: 'APP', name: "OutsIIT", companyName: "Company XYZ", category: "Team Lead" },
+//     // { cat: 'WEB', name: "CITES", companyName: "Another Company", category: "Self Challenge" },
+//     // { cat: 'WEB', name: "Child", companyName: "Yet Another Company", category: "Self Challenge" },
+//     // { cat: 'APP', name: "Mobo Dashboard", companyName: "Company ABC", category: "Self Challenge" },
+//     { cat: 'IOS', name: "Banao Technologies", companyName: "Banao Technologies", role: "React Native IOS Devloper" },
+//     { cat: 'APP', name: "Institute Building", companyName: "Institute Building", role: "Overall Lead" },
+//     { cat: 'WEB', name: "REEFS Labs", companyName: "REEFS Labs", role: "Web Development" },
+//     { cat: 'APP', name: "ArgyleEnigma Labs", companyName: "ArgyleEnigma Labs", role: "Design & Development" },
+// ];
 
 export default function Projects2() {
     const { isTabletOrLaptop, setIsTabletOrLaptop } = useContext(GlobalStateContext);
@@ -39,9 +40,9 @@ export default function Projects2() {
                 //     padding: '0 4em',
                 // }}
                 >
-                    {isTabletOrLaptop ? <Work imgSources={imgSources} projectList={outlets} noImage={true} />
+                    {isTabletOrLaptop ? <Work imgSources={imgSources} projectList={Experience} noImage={true} noNavigation={true}/>
                         :
-                        <WorkMobo imgSources={imgSources} projectList={outlets} noImage={true} />
+                        <WorkMobo imgSources={imgSources} projectList={Experience} noImage={true} noNavigation={true}/>
                     }
                     {/* <div id='info2' className=' flex flex-row gap-3 mt-3'> */}
                         {/* <div className=' w-5 h-5 bg-white rounded-full' />

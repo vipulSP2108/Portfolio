@@ -40,15 +40,7 @@ import './HomeScreen.css';
 import { GlobalStateContext } from '../Context/GlobalStateProvider';
 import AboutPhone from './AboutPhone';
 import Projects2Phone from './Projects2Phone';
-
-const outlets = [
-    // { cat: 'APP', name: "OutsIIT", companyName: "Company XYZ", category: "Team Lead" },
-    // { cat: 'WEB', name: "CITES", companyName: "Another Company", category: "Self Challenge" },
-    // { cat: 'WEB', name: "Child", companyName: "Yet Another Company", category: "Self Challenge" },
-    // { cat: 'APP', name: "Mobo Dashboard", companyName: "Company ABC", category: "Self Challenge" },
-    { cat: 'APP', name: "ArgyleEnigma Labs", companyName: "ArgyleEnigma Labs", role: "Design & Development" },
-    { cat: 'WEB', name: "REEFS Labs", companyName: "ArgyleEnigma Labs", role: "Web Development" }
-];
+import { Experience } from '../Data/Experience';
 
 function HomeScreen() {
     const navigate = useNavigate();
@@ -93,10 +85,10 @@ function HomeScreen() {
             {/* {isTabletOrLaptop && } */}
             {isTabletOrLaptop ? <About ref={aboutRef} /> : <AboutPhone ref={aboutRef} />}
             {isTabletOrLaptop && <Between2 />}
-            {isTabletOrLaptop ? <Projects2 /> : <Projects2Phone textcont={'Explore Work'} sampleData={sampleDataNew} />}
+            {isTabletOrLaptop ? <Projects2 /> : <Projects2Phone noNavigation={true} textcont={'Explore Work'} sampleData={sampleDataNew} />}
             {isTabletOrLaptop && <Projects />}
             {/* <Between3/> */}
-            {isTabletOrLaptop ? <History /> : <Projects2Phone textcont={'History as Devloper'} sampleData={outlets} />}
+            {isTabletOrLaptop ? <History /> : <Projects2Phone noNavigation={true} textcont={'History as Devloper'} sampleData={Experience} />}
 
             {/* <Contact /> */}
             {/* <Grid/> */}

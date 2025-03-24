@@ -25,8 +25,8 @@ export default function AboutPhone() {
     const randomizedSkills = shuffleArray([...sampleDataSkills]);
 
     return (
-        <div className='px-6'>
-            <div className="flex items-start justify-start mb-10 md:mb-12">
+        <div className='px-6 '>
+            <div className="flex items-start justify-start mb-14 md:mb-12">
                 <span
                     style={{ fontFamily: 'Montserrat' }}
                     className="text-xs font-semibold uppercase z-30 tracking-[5px]"

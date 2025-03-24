@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Projects2Phone({textcont, sampleData}) {
+export default function Projects2Phone({noNavigation, textcont, sampleData}) {
     const navigate = useNavigate();
 
     const handleClick = (project) => {
@@ -33,7 +33,7 @@ export default function Projects2Phone({textcont, sampleData}) {
     }, []);
 
     return (
-        <div className=' mt-36 mb-12'>
+        <div className=' mt-40 mb-20 h-full'>
             <div className="px-6 flex items-start justify-start mb-10 md:mb-12">
                 <span
                     style={{ fontFamily: 'Montserrat' }}
