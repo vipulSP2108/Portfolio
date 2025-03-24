@@ -67,14 +67,14 @@ export default function ProjectDetails() {
 
                 <div className='z-30 pt-24'>
                     {/* Project Title and Date */}
-                    <div style={{ fontFamily: "Zain" }} className='z-30 w-screen text-8xl font-black text-center'>
+                    <div style={{ fontFamily: "Zain" }} className='z-30 text-4xl md:text-8xl font-black text-center'>
                         <div>{name}</div>
                         <div style={{ fontFamily: "Lilita One" }} className='text-xl font-medium text-[#888888]'>
                             {date}
                         </div>
                     </div>
 
-                    <div className='px-48 w-full h-full'>
+                    <div className=' px-7 md:px-48 w-full h-full'>
                         {/* ShowCase Image - Only show if it exists */}
                         {ShowCase && (
                             <div>
@@ -83,15 +83,15 @@ export default function ProjectDetails() {
                         )}
 
                         {/* Overview Section */}
-                        <div className='flex pt-28'>
-                            <div className='w-1/2 flex flex-col gap-7'>
+                        <div className='md:flex pt-20 md:pt-28'>
+                            <div className='md:w-1/2 flex flex-col gap-7'>
                                 <div className='flex flex-col'>
-                                    <span>My Role</span>
-                                    <span className='text-[#888888]'>{role}</span>
+                                    <span className='mb-1 '>My Role</span>
+                                    <span className='text-[#888888] leading-[25px] '>{role}</span>
                                 </div>
                                 <div className='flex flex-col'>
-                                    <span>Team</span>
-                                    <div className='text-[#888888]'>
+                                    <span className=' mb-1'>Team</span>
+                                    <div className='text-[#888888] leading-[25px]'>
                                         {/* Map over team members and create clickable LinkedIn links */}
                                         {validTeam.map((member, index) => (
                                             <span key={index}>
@@ -105,15 +105,15 @@ export default function ProjectDetails() {
                                     </div>
                                 </div>
                                 <div className='flex flex-col'>
-                                    <span>Timeline & Status</span>
-                                    <span className='text-[#888888]'>{timeline}</span>
+                                    <span className=' mb-1'>Timeline & Status</span>
+                                    <span className='text-[#888888] leading-[25px]'>{timeline}</span>
                                 </div>
                             </div>
 
-                            <div className='w-1/2'>
+                            <div className=' mt-7 md:mt-0 md:w-1/2'>
                                 <div className='flex flex-col'>
-                                    <span>Overview</span>
-                                    <span className='text-[#888888]'>{overview}</span>
+                                    <span className=' mb-1'>Overview</span>
+                                    <span className='text-[#888888] leading-[25px]'>{overview}</span>
                                 </div>
                             </div>
                         </div>
@@ -121,7 +121,7 @@ export default function ProjectDetails() {
                         {/* Highlights Section */}
                         {highlight && (
                             <div className='p-7 mt-28 rounded-2xl' id='glasses'>
-                                <div className='w-full text-center p-12'>
+                                <div className='w-full text-center p-2 md:p-12'>
                                     <span>{highlight}</span>
                                 </div>
 

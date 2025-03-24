@@ -11,8 +11,11 @@ const textItems = [
     'Frontend Developer'
 ];
 import { sampleDataSkills } from '../Data/sampleDataSkills';
+import { useNavigate } from 'react-router-dom';
 
 export default function AboutPhone() {
+
+    // const navigate = useNavigate();
 
     const shuffleArray = (array) => {
         for (let i = array.length - 1; i > 0; i--) {
