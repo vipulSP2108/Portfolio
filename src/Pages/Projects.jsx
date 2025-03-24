@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { gallaryDataSample } from '../Data/GallaryData';
 
 export default function Projects() {
-    const [hoveredItemIndex, setHoveredItemIndex] = useState(11);
+    const [hoveredItemIndex, setHoveredItemIndex] = useState(4);
     const indicatorRef = useRef(null);
     const galleryContainerRef = useRef(null);
 
@@ -60,21 +60,21 @@ export default function Projects() {
     return (
         <div
             style={{ userSelect: 'none' }}
-            className={`z-30 flex items-center justify-center px-52 h-screen`}
+            className={`z-30 flex items-center justify-center px-52 2xl:px-96 h-screen`}
             onMouseMove={handleMouseMove}
             ref={galleryContainerRef}
         >
             <div className=' overflow-hidden'>
                 {/* {console.log()} */}
-                <div id='gallary' style={{ display: 'flex', justifyContent: 'space-around', width: '100%', overflow: 'hidden' }}>
+                <div id='gallary' style={{ display: 'flex', justifyContent: 'center', width: '100%', overflow: 'hidden' }}>
                     {galleryItemsArray.map((_, index) => (
                         <div
                             key={index}
                             id='gallary-item'
-                            className=' flex items-center justify-center overflow-hidden'
+                            className=' flex items-center h-[350px] 2xl:h-[550px] justify-center overflow-hidden'
                             style={{
-                                flex: hoveredItemIndex === index ? '1 1 ' : '0 1 20px',
-                                height: '350px',
+                                flex: hoveredItemIndex === index ? '1 1 450px' : '0 1 20px',
+                                // height: '350px',
                                 margin: '0 5px',
                                 transition: 'flex 1s cubic-bezier(0.075, 0.82, 0.165, 1)',
                             }}

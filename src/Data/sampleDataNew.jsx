@@ -8,6 +8,7 @@ import CitiesDevGame from '../assets/Cities.png';
 // import RentHouse from '../assets/RentHouse.png';
 import MoboDashboard from '../assets/MoboDashboard.png';
 import OnlineBubbleGame from '../assets/OnlineBubbleGame.png';
+import Suduko from '../assets/Suduko.png';
 
 export const sampleDataNew = [
   // {
@@ -30,91 +31,64 @@ export const sampleDataNew = [
   //       { image: OutsIIT, imageAltText: "Logo", imageDescription: "0.2 Sample UI components." },
   //     ],
   //   },
-  // },
-  {
-    cat: 'WEB',
-    name: "Mobo Dashboard",
-    date: "September 2024",
-    role: "Self - App Development",
-    ShowCase: Project,
-    VideoShowCase: MoboDashboard,
-    Overview: {
-      role: "Game Development — 3D Modeling, Game Mechanics, Dynamic Content Updating",
-      team: "Self-driven project",
-      timeline: "Ongoing development with continuous updates",
-      overview: "Developed a city simulation game featuring road construction, and the creation of residential, industrial, and commercial structures. This project provided hands-on experience in game development and dynamic content updating based on in-game time progression. Currently, the project is being enhanced with additional features and improvements.",
+  // }
+    
+    
+    {
+      cat: 'APP',
+      name: "MoboDash VIS",
+      date: "May '24 - July '24",
+      role: "App Devlopment",
+      VideoShowCase: MoboDashboard,
+      // Showcase: "path/to/showcase-image.jpg", // Replace with actual image path if available
+      Overview: {
+        role: "React Native Developer — Vehicle Informant System Development, Android Sensor Integration, UI/UX Design",
+        team: [
+          { name: "Self-driven project" }, // Add team members here if applicable
+        ],
+        timeline: "3 Months",
+        overview: "The project aimed to allow drivers to use their phones as a functional Informant System for their vehicles. It includes features such as speed tracking, music control, battery monitoring, and light control, built using React Native and Android sensors."
+      },
+      Highlights: {
+        highlight: "A foundational city simulation game with potential for further development and feature expansion.",
+        highlightShow: [
+          { image: MoboDashboard, imageAltText: "Game Screenshot", imageDescription: "City building and management interface." },
+        ],
+      },
     },
-    Highlights: {
-      highlight: "A foundational city simulation game with potential for further development and feature expansion.",
-      highlightShow: [
-        { image: MoboDashboard, imageAltText: "Game Screenshot", imageDescription: "City building and management interface." },
-        { image: MoboDashboard, imageAltText: "Game Screenshot", imageDescription: "Construction of various structures in the game." },
-      ],
+    {
+      cat: 'ALGO',
+      name: "Sudoku Solver",
+      date: "May '24 - July '24",
+      role: "Developer",
+      VideoShowCase: Suduko,
+      // Showcase: "path/to/showcase-image.jpg", // Replace with actual image path if available
+      Overview: {
+        role: "Developer — Sudoku Solver Development, Algorithm Implementation, Interactive Features",
+        team: [
+          { name: "Self-driven project" }, // Add team members here if applicable
+        ],
+        timeline: "4 months",
+        overview: "Developed an interactive Sudoku solver that demonstrates various algorithms like Backtracking and Forward Checking to efficiently solve Sudoku puzzles. The project features dynamic hover matrices, probability distribution updates, and allows users to experiment with different solving methods. Key features include step-by-step visualization and real-time impact of algorithms on solving efficiency."
+      }
     },
-  },
-  {
-    cat: 'APP',
-    name: "Safety Monitoring",
-    date: "November 2023",
-    role: "Team Member",
-    ShowCase: Project,
-    VideoShowCase: OutsIIT,
-    Overview: {
-      role: "Developer — Integration of Hardware Sensors, Mobile App Development",
-      team: "Ranit Biswas, Raj Patel",
-      timeline: "4 Months, Completed in November 2023",
-      overview: "Developed an Android/iOS application using MATLAB for child safety monitoring. This project involved integrating various hardware sensors (gyroscope, accelerometer, GPS, microphone, antenna) to enhance child safety through real-time data transmission between the IoT system and parents’ mobile devices.",
+    {
+      cat: 'GAME',
+      name: "SimCity Game",
+      date: "Ongoing",
+      role: "Game Developer",
+      VideoShowCase: CitiesDevGame,
+      // Showcase: "path/to/showcase-image.jpg", // Replace with actual image path if available
+      Overview: {
+        role: "Game Developer — City Simulation Game Development, Dynamic Content Updating, 3D Structures Creation",
+        team: [
+          { name: "Vipul SP" }, // Add team members here if applicable
+        ],
+        timeline: "Ongoing",
+        overview: "Developed a city simulation game that allows players to construct 3D structures, roads, and apartments. The game features dynamic content updates based on in-game time progression, using three.js and web technologies."
+      }
     },
-    Highlights: {
-      highlight: "Innovative application enhancing child safety through advanced sensor integration and real-time monitoring.",
-      highlightShow: [
-        { image: OutsIIT, imageAltText: "App Interface", imageDescription: "Dashboard showing real-time data from sensors." },
-        // { image: ChildSafetyMonitoring, imageAltText: "App Interface", imageDescription: "Safety alerts and notifications for parents." },
-      ],
-    },
-  },
-  {
-    cat: 'WEB',
-    VideoShowCase: OnlineBubbleGame,
-    role: "Self — Game Development",
-    name: "Bubble Game",
-    date: "March 2024",
-    ShowCase: Project,
-    Overview: {
-      role: "Self — Game Development",
-      team: "Self-driven project",
-      timeline: "Completed in March 2024",
-      overview: "Developed an interactive number game involving clicking target numbers within a dynamic set. Gained experience in creating engaging user experiences through interactive elements, designing and implementing game mechanics, and adding optional complexity with negative points.",
-    },
-    Highlights: {
-      highlight: "Designed an engaging interactive game with dynamic elements and optional complexity for a challenging user experience.",
-      highlightShow: [
-        { image: OnlineBubbleGame, imageAltText: "Game Screenshot", imageDescription: "Interactive number game interface with target numbers." },
-        { image: OnlineBubbleGame, imageAltText: "Game Mechanics", imageDescription: "Gameplay mechanics and dynamic target changes." },
-      ],
-    },
-  },
-  {
-    cat: 'EMB',
-    VideoShowCase: SparshBhashi,
-    role: "Tech Lead",
-    name: "SparshBhashi",
-    date: "May 2023 - August 2023",
-    ShowCase: Project,
-    Overview: {
-      role: "Programming Supervisor & Finance Manager — Interactive Teaching Modules",
-      team: "Collaborative project",
-      timeline: "4 Months, Completed in August 2023",
-      overview: "Developed interactive teaching modules for visually impaired users, focusing on microcontroller-based model development. Managed programming tasks and resource allocation, successfully enhancing Braille education capabilities.",
-    },
-    Highlights: {
-      highlight: "Enhanced Braille education through interactive teaching modules and effective project management.",
-      highlightShow: [
-        { image: SparshBhashi, imageAltText: "Teaching Modules", imageDescription: "Interactive teaching modules for visually impaired users." },
-        { image: SparshBhashi, imageAltText: "Microcontroller Model", imageDescription: "Microcontroller-based model development for education." },
-      ],
-    },
-  },
+  
 
 
 

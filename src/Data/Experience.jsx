@@ -47,7 +47,7 @@ export const Experience = [
         }
     },
     {
-        cat: 'Web',
+        cat: 'WEB',
         name: "REEFS Labs",
         date: "November 2023",
         role: "Web Developer",
@@ -68,7 +68,7 @@ export const Experience = [
         }
     },
     {
-        cat: 'App',
+        cat: 'APP',
         name: "ArgyleEnigma Labs",
         date: "October 2023",
         role: "Design & Development",

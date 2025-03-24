@@ -10,7 +10,7 @@ import Eii from '../assets/Eii.png';
 import ESummit from '../assets/ESummit.png';
 import BanaoHumm from '../assets/BanaoHumm3.png';
 import Portfolio from '../assets/Portfolio.png';
-
+import OnlineBubbleGame from '../assets/OnlineBubbleGame.png';
 
 export const gallaryDataSample = [
     {
@@ -48,6 +48,9 @@ export const gallaryDataSample = [
     },
     {
         Image: Portfolio,
+    },
+    {
+        Image: OnlineBubbleGame,
     },
 
 ]
