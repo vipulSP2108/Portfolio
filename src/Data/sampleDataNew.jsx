@@ -9,29 +9,28 @@ import CitiesDevGame from '../assets/Cities.png';
 import MoboDashboard from '../assets/MoboDashboard.png';
 import OnlineBubbleGame from '../assets/OnlineBubbleGame.png';
 
-
 export const sampleDataNew = [
-  {
-    cat: 'APP',
-    name: "OutsIIT",
-    date: "January 2024",
-    role: "Team Lead",
-    ShowCase: Project,
-    VideoShowCase: OutsIIT,
-    Overview: {
-      role: "Frontend Lead and — Interaction Design, User Flows, Rapid Prototyping",
-      team: "Pranav Somase, Piyush Vishwakarma",
-      timeline: "4 Months, APK Released in August 2024",
-      overview: "The OutsIIT App was designed to revolutionize the way users interact with campus outlets at IIT Gandhinagar (IITGN). This project aimed to streamline the process of ordering various items—from stationery to food—by creating a seamless and intuitive user flow. By focusing on simplifying campus outlet management, the app enhances both user experience and operational efficiency for shopkeepers.",
-    },
-    Highlights: {
-      highlight: "A comprehensive solution for streamlining ordering processes and enhancing user interactions with campus outlets.",
-      highlightShow: [
-        { image: OutsIIT, imageAltText: "Logo", imageDescription: "0.1 Homepage motion concept." },
-        { image: OutsIIT, imageAltText: "Logo", imageDescription: "0.2 Sample UI components." },
-      ],
-    },
-  },
+  // {
+  //   cat: 'APP',
+  //   name: "OutsIIT",
+  //   date: "January 2024",
+  //   role: "Team Lead",
+  //   ShowCase: Project,
+  //   VideoShowCase: OutsIIT,
+  //   Overview: {
+  //     role: "Frontend Lead and — Interaction Design, User Flows, Rapid Prototyping",
+  //     team: "Pranav Somase, Piyush Vishwakarma",
+  //     timeline: "4 Months, APK Released in August 2024",
+  //     overview: "The OutsIIT App was designed to revolutionize the way users interact with campus outlets at IIT Gandhinagar (IITGN). This project aimed to streamline the process of ordering various items—from stationery to food—by creating a seamless and intuitive user flow. By focusing on simplifying campus outlet management, the app enhances both user experience and operational efficiency for shopkeepers.",
+  //   },
+  //   Highlights: {
+  //     highlight: "A comprehensive solution for streamlining ordering processes and enhancing user interactions with campus outlets.",
+  //     highlightShow: [
+  //       { image: OutsIIT, imageAltText: "Logo", imageDescription: "0.1 Homepage motion concept." },
+  //       { image: OutsIIT, imageAltText: "Logo", imageDescription: "0.2 Sample UI components." },
+  //     ],
+  //   },
+  // },
   {
     cat: 'WEB',
     name: "Mobo Dashboard",

@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useEffect } from 'react';
+import { gallaryDataSample } from '../Data/GallaryData';
 
 export default function Projects() {
     const [hoveredItemIndex, setHoveredItemIndex] = useState(11);
@@ -64,6 +65,7 @@ export default function Projects() {
             ref={galleryContainerRef}
         >
             <div className=' overflow-hidden'>
+                {/* {console.log()} */}
                 <div id='gallary' style={{ display: 'flex', justifyContent: 'space-around', width: '100%', overflow: 'hidden' }}>
                     {galleryItemsArray.map((_, index) => (
                         <div
@@ -83,6 +85,7 @@ export default function Projects() {
                                 style={{
                                     width: '450px',
                                     height: '100%',
+                                    background: `url(${gallaryDataSample[index]?.Image})`,
                                     // background: 'url(https://assets-global.website-files.com/641ef7ac927bd55e5b0aa762/653670a6bf5aa08269455f1d_Magic.webp)',
                                     backgroundPosition: 'center',
                                     backgroundSize: 'cover',
