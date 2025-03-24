@@ -38,6 +38,7 @@ import NavbarTop from '../Components/NavbarTop';
 
 import './HomeScreen.css';
 import { GlobalStateContext } from '../Context/GlobalStateProvider';
+import AboutPhone from './AboutPhone';
 
 function HomeScreen() {
     const navigate = useNavigate();
@@ -70,7 +71,7 @@ function HomeScreen() {
     }, []);
 
     return (
-        <div>
+        <div style={{userSelect: "none" }}>
             {/* <Navbar /> */}
             <NavbarBottom />
             <NavbarTop />
@@ -80,6 +81,7 @@ function HomeScreen() {
             {/* <Movingbar /> */}
             {/* <Between1 /> */}
             {isTabletOrLaptop && <About ref={aboutRef} />}
+            <AboutPhone ref={aboutRef} />
             <Between2 />
             <Projects2 />
             <Projects />

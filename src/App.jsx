@@ -48,7 +48,7 @@ export default function App() {
 
   return (
     <HashRouter>
-      <div style={{ fontFamily: "Zain" }} className=' overscroll-none z-0 cursor-none w-full text-2xl text-white bg-[#171C24] ' >
+      <div style={{ fontFamily: "Zain", userSelect: "none" }} className=' overscroll-none z-0 cursor-none w-full text-2xl text-white bg-[#171C24] ' >
         <GridBg />
         {isTabletOrLaptop && <Cursor />}
 
