@@ -1,4 +1,5 @@
 import React from 'react'
+import WordAnimation from './WordAnimation'
 
 export default function NavbarTop() {
   return (
@@ -7,10 +8,11 @@ export default function NavbarTop() {
     // className="fixed z-50 top-12 right-16 rounded-2xl cursor-pointer"
     >
       <div style={{ fontFamily: "Montserrat" }} className='text-right uppercase'>
-        <div className='hover:text-[#fff] text-[#888888] text-xs md:text-sm font-bold mb-1'>About</div>
+        <div>
+          {/* <WordAnimation styleGiven={'hover:text-[#fff] text-[#888888] text-xs md:text-sm font-bold mb-1'} projectList={['About', 'Work']}/> */}
+          <WordAnimation styleGiven=" text-[#888888] text-xs md:text-sm font-bold" gapProvided={3} projectList={['About', 'Work', 'Contact']} />
+          </div>
         <div className='hover:text-[#fff] text-[#888888] text-xs md:text-sm font-bold mb-1'>Work</div>
-        <div className='hover:text-[#fff] text-[#888888] text-xs md:text-sm font-bold mb-1'>Services</div>
-        <div className='hover:text-[#fff] text-[#888888] text-xs md:text-sm font-bold'>Contact</div>
       </div>
     </div>
   )

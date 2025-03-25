@@ -16,6 +16,7 @@ export default function NavbarBottom() {
         className="hover:text-[#fff] text-[#888888] uppercase text-xs md:text-sm font-bold pr-2"
       >
         Move to 
+        
         <span className="text-[#fff] font-bold text-xs md:text-sm"> Top</span>
       </text>
     </div>

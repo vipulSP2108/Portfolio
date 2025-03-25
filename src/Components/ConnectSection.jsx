@@ -1,5 +1,6 @@
 import React from 'react';
 import { RxCornerTopRight, RxTriangleRight, RxTriangleUp } from 'react-icons/rx';
+import WordAnimation from './WordAnimation';
 
 const ConnectSection = () => {
   const socialLinksLeft = [
@@ -53,6 +54,7 @@ const ConnectSection = () => {
                 rel="noopener noreferrer"
                 className="z-30 font-semibold text-3xl md:text-3xl text-gray-200 hover:text-red-500"
               >
+                {/* <WordAnimation styleGiven=" text-[#888888] text-xs md:text-sm font-bold" gapProvided={3} projectList={[link.name]} /> */}
                 {link.name}
               </a>
             </div>
