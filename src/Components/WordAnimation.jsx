@@ -109,8 +109,8 @@ export default function WordAnimation({ gapProvided = 3, projectList, styleGiven
     }, []);
 
     return (
-        <div style={{display: 'block'}}>
-            <div ref={menuRef} id='menu' style={{display: 'block'}} >
+        <div>
+            <div ref={menuRef}>
                 {projectList.map((project, index) => (
                     <div
                         ref={el => menuItemsRef.current[index] = el}
@@ -121,7 +121,7 @@ export default function WordAnimation({ gapProvided = 3, projectList, styleGiven
                             // backgroundColor: 'blue',
                             paddingTop: gapProvided,
                             paddingBottom: gapProvided,
-                            overflow: 'hidden',
+                            // overflow: 'hidden',
                             borderColor: '#888888',
                             cursor: 'pointer',
                             position: 'relative',  // Ensure relative positioning for correct stacking

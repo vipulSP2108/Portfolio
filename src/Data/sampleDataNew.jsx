@@ -1,7 +1,7 @@
 import RentHouse from '../assets/RentHouse.png';
 import Project from '../assets/Project.png';
 
-
+import Colab from '../assets/Colab.png';
 import SparshBhashi from '../assets/SparshBhashi.png';
 import OutsIIT from '../assets/OutsIIT.png';
 import CitiesDevGame from '../assets/Cities.png';
@@ -86,6 +86,22 @@ export const sampleDataNew = [
         ],
         timeline: "Ongoing",
         overview: "Developed a city simulation game that allows players to construct 3D structures, roads, and apartments. The game features dynamic content updates based on in-game time progression, using three.js and web technologies."
+      }
+    },
+    {
+      cat: 'WEB',
+      name: "Colab IITGn",
+      date: "December '24 - February '25",
+      role: "Web Developer",
+      VideoShowCase: Colab,
+      // Showcase: "path/to/showcase-image.jpg", // Replace with actual image path if available
+      Overview: {
+        role: "Web Developer — Frontend Development, Backend Integration, UI/UX Design",
+        team: [
+          { name: "Ananthu JP" }, // https://www.linkedin.com/in/ananthujp/
+        ],
+        timeline: "3 months",
+        overview: "I was responsible for developing a modern, responsive website to showcase the lab’s cutting-edge research and development projects. My work included frontend development using React and integrating backend services to display real-time data related to ongoing projects and events."
       }
     },
   

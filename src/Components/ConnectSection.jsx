@@ -36,7 +36,7 @@ const ConnectSection = () => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="z-30 font-semibold text-3xl md:text-3xl text-gray-200 hover:text-red-500"
+                className="z-30 font-semibold text-3xl md:text-3xl text-[#888888] hover:text-[#fff]"
               >
                 {link.name}
               </a>
@@ -52,7 +52,7 @@ const ConnectSection = () => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="z-30 font-semibold text-3xl md:text-3xl text-gray-200 hover:text-red-500"
+                className="z-30 font-semibold text-3xl md:text-3xl text-[#888888] hover:text-[#fff]"
               >
                 {/* <WordAnimation styleGiven=" text-[#888888] text-xs md:text-sm font-bold" gapProvided={3} projectList={[link.name]} /> */}
                 {link.name}
@@ -63,14 +63,18 @@ const ConnectSection = () => {
 
         <div className=' flex mt-16 md:mt-0'>
           <div className="z-30 md:pr-32">
-            <div className=''>
-              <h3 className="z-30 text-xl md:text-lg -mb-2">Email</h3>
-              <h3 className="z-30 text-[#888888] text-xl md:text-lg">vipul.patil@iitgn.ac.in</h3>
-            </div>
-            <div className=' mt-3 md:mt-0'>
-              <h3 className="z-30 text-xl md:text-lg -mb-2">Phone</h3>
-              <h3 className="z-30  text-[#888888] text-xl md:text-lg">+91 88065 49952</h3>
-            </div>
+            <a href="mailto:vipul.patil@iitgn.ac.in" className="block mt-3 md:mt-0">
+              <div className=''>
+                <h3 className="z-30 text-xl md:text-lg -mb-2">Email</h3>
+                <h3 className="z-30 text-[#888888] text-xl md:text-lg">vipul.patil@iitgn.ac.in</h3>
+              </div>
+            </a>
+            <a href="tel:+918806549952" className="block mt-3 md:mt-0">
+              <div className=' mt-3 md:mt-0'>
+                <h3 className="z-30 text-xl md:text-lg -mb-2">Phone</h3>
+                <h3 className="z-30  text-[#888888] text-xl md:text-lg">+91 88065 49952</h3>
+              </div>
+            </a>
           </div>
         </div>
       </div>

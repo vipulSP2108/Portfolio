@@ -76,7 +76,10 @@ export const Experience = [
         // VideoShowcase: ArgyleApp,
         Overview: {
             role: "App Developer — UI/UX Design, Frontend Development",
-            team: "Sanya Joshi, Amit Soni",
+            team: [
+                { name: "Sagar Giradkar" }, // https://www.linkedin.com/in/sagar-giradkar-b21581234/
+                { name: "Santosh Mane" } // https://www.linkedin.com/in/santoshmaneofficial/
+            ],
             timeline: "2 Months, Worked on App",
             overview: "Developed a 'Pro Mode' feature within a mobile application, enhancing premium user functionality. Additionally, I integrated and optimized a payment gateway to ensure secure and seamless transactions for users."
         },
