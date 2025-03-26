@@ -31,7 +31,7 @@ const ConnectSection = () => {
         <div className="z-30">
           {socialLinksLeft.map((link, index) => (
             <div key={index} className="flex space-x-2 items-start">
-              <span className="z-30 text-red-500 rotate-45 -mr-2"><RxTriangleUp /></span>
+              <span className="z-30 text-blue-400 rotate-45 -mr-2"><RxTriangleUp /></span>
               <a
                 href={link.url}
                 target="_blank"
@@ -47,7 +47,7 @@ const ConnectSection = () => {
         <div className="z-30">
           {socialLinksRight.map((link, index) => (
             <div key={index} className="flex space-x-2 items-start">
-              <span className="z-30 text-red-500 rotate-45 -mr-2"><RxTriangleUp /></span>
+              <span className="z-30 text-blue-400 rotate-45 -mr-2"><RxTriangleUp /></span>
               <a
                 href={link.url}
                 target="_blank"

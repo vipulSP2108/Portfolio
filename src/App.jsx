@@ -70,7 +70,7 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/Skills" element={<Skills />} />
           </Routes>
-          <ConnectSection />
+          
 
         </div>
 

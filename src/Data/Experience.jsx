@@ -44,7 +44,10 @@ export const Experience = [
                 // { image: InstituteBuildingApp, imageAltText: "App Screenshot", imageDescription: "0.1 Course Management Feature" },
                 // { image: InstituteBuildingApp, imageAltText: "App Screenshot", imageDescription: "0.2 Campus Event Scheduler" }
             ]
-        }
+        }, extras: [
+            { title: 'Play Store', link: 'https://play.google.com/store/apps/details?id=com.vsp.app2' },
+            { title: 'Final Report', link: 'https://drive.google.com/file/d/1MPKwHSvZSj5XP8_uKQdOR-8GjSR85S2y/view?usp=sharing' },
+        ]
     },
     {
         cat: 'WEB',

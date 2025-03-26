@@ -72,27 +72,41 @@ function HomeScreen() {
         };
     }, []);
 
+
+    const workRef = useRef(null); // Add workRef for Work section
+    const contactRef = useRef(null); // Add contactRef for Contact section
+
     return (
         <div style={{ userSelect: "none" }}>
             {/* <Navbar /> */}
             <NavbarBottom />
-            <NavbarTop />
+            <NavbarTop
+                aboutRef={aboutRef}
+                workRef={workRef}
+                contactRef={contactRef}
+            />
             {isTabletOrLaptop && <Contactbar />}
             {/* <Contactbar id="show-on-tablet-laptop" /> */}
             <Home />
             {/* <Movingbar /> */}
             {/* <Between1 /> */}
             {/* {isTabletOrLaptop && } */}
-            {isTabletOrLaptop ? <About ref={aboutRef} /> : <AboutPhone ref={aboutRef} />}
+            <div ref={aboutRef} >
+                {isTabletOrLaptop ? <About /> : <AboutPhone />}
+            </div>
+
             {isTabletOrLaptop && <Between2 />}
-            {isTabletOrLaptop ? <Projects2 /> : <Projects2Phone noNavigation={true} textcont={'Explore Work'} sampleData={sampleDataNew} />}
+            <div ref={workRef} >
+                {isTabletOrLaptop ? <Projects2 /> : <Projects2Phone noNavigation={true} textcont={'Explore Work'} sampleData={sampleDataNew} />}
+            </div>
             {isTabletOrLaptop && <Projects />}
             {/* <Between3/> */}
             {isTabletOrLaptop ? <History /> : <Projects2Phone noNavigation={true} textcont={'History as Devloper'} sampleData={Experience} />}
-
+            <div ref={contactRef} />
             {/* <Contact /> */}
             {/* <Grid/> */}
             {/* <FooterCostom /> */}
+            <ConnectSection />
         </div>
     );
 }

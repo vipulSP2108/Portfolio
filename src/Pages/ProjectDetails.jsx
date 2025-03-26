@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaArrowLeft } from 'react-icons/fa6';
 import { useLocation, useNavigate } from 'react-router-dom';
 import FooterCostom from '../Components/FooterCostom';
+import ConnectSection from '../Components/ConnectSection';
 
 export default function ProjectDetails() {
     const location = useLocation();
     const navigate = useNavigate();
     const { project } = location.state || {};
+
+    // const location = useLocation();
+
+    useEffect(() => {
+        //   window.scrollTo(0, 0);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, [location]);
+
 
     // Check if project is available, if not, show a message and return early
     if (!project) {
@@ -28,6 +37,7 @@ export default function ProjectDetails() {
             highlight = "No highlight provided", // Default value in case 'highlight' is undefined
             highlightShow = [], // Default to an empty array if 'highlightShow' is undefined
         } = {}, // In case Highlights is undefined, we provide a default empty object
+        extras
     } = project;
 
     // Ensure team is an array (if it's not an array, default it to [])
@@ -95,8 +105,8 @@ export default function ProjectDetails() {
                                         {/* Map over team members and create clickable LinkedIn links */}
                                         {validTeam.map((member, index) => (
                                             <span key={index}>
-                                                <a href={member.linkedin} target="_blank" rel="noopener noreferrer" > 
-                                                {/* className="text-blue-500" */}
+                                                <a href={member.linkedin} target="_blank" rel="noopener noreferrer" >
+                                                    {/* className="text-blue-500" */}
                                                     {member.name}
                                                 </a>
                                                 {index < validTeam.length - 1 && ", "}
@@ -142,9 +152,26 @@ export default function ProjectDetails() {
                                 ))}
                             </div>
                         )}
+
+                        {extras && (
+                            <div style={{ borderColor: 'rgba(136, 136, 136, 0.3)' }} className='flex items-center justify-center gap-4 border-t-[1px] mt-10'>
+                                {extras.length > 0 && extras.map((item, index) => (
+                                    <a href={item.link} target="_blank" rel="noopener noreferrer">
+                                        <div key={index} className='rounded-full px-3 mt-3' id='glasses'>
+                                            <text className='text-lg'>
+                                                {item.title}
+                                            </text>
+                                        </div>
+                                    </a>
+                                ))}
+                            </div>
+                        )}
+
                     </div>
                 </div>
             </div>
+
+            <ConnectSection />
         </>
     );
 }

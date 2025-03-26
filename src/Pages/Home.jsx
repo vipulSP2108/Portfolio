@@ -88,7 +88,7 @@ export default function Home() {
 
   return (
     <div
-      className='z-0  flex flex-col items-center justify-center w-full h-screen text-center'
+      className='z-0 mt-12 md:mt-0  flex flex-col items-center justify-center w-full h-screen text-center'
     >
       <div className=' z-30'>
         <div style={{ fontFamily: "Montserrat", userSelect: "none" }} className=' text-lg md:text-xl tracking-widest font-normal text-[#888888]'>

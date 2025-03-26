@@ -32,83 +32,94 @@ export const sampleDataNew = [
   //     ],
   //   },
   // }
-    
-    
-    {
-      cat: 'APP',
-      name: "MoboDash VIS",
-      date: "May '24 - July '24",
-      role: "App Devlopment",
-      VideoShowCase: MoboDashboard,
-      // Showcase: "path/to/showcase-image.jpg", // Replace with actual image path if available
-      Overview: {
-        role: "React Native Developer — Vehicle Informant System Development, Android Sensor Integration, UI/UX Design",
-        team: [
-          { name: "Self-driven project" }, // Add team members here if applicable
-        ],
-        timeline: "3 Months",
-        overview: "The project aimed to allow drivers to use their phones as a functional Informant System for their vehicles. It includes features such as speed tracking, music control, battery monitoring, and light control, built using React Native and Android sensors."
-      },
-      Highlights: {
-        highlight: "A foundational city simulation game with potential for further development and feature expansion.",
-        highlightShow: [
-          { image: MoboDashboard, imageAltText: "Game Screenshot", imageDescription: "City building and management interface." },
-        ],
-      },
+
+
+  {
+    cat: 'APP',
+    name: "MoboDash VIS",
+    date: "May '24 - July '24",
+    role: "App Devlopment",
+    VideoShowCase: MoboDashboard,
+    // Showcase: "path/to/showcase-image.jpg", // Replace with actual image path if available
+    Overview: {
+      role: "React Native Developer — Vehicle Informant System Development, Android Sensor Integration, UI/UX Design",
+      team: [
+        { name: "Self-driven project" }, // Add team members here if applicable
+      ],
+      timeline: "3 Months",
+      overview: "The project aimed to allow drivers to use their phones as a functional Informant System for their vehicles. It includes features such as speed tracking, music control, battery monitoring, and light control, built using React Native and Android sensors."
     },
-    {
-      cat: 'ALGO',
-      name: "Sudoku Solver",
-      date: "May '24 - July '24",
-      role: "Developer",
-      VideoShowCase: Suduko,
-      // Showcase: "path/to/showcase-image.jpg", // Replace with actual image path if available
-      Overview: {
-        role: "Developer — Sudoku Solver Development, Algorithm Implementation, Interactive Features",
-        team: [
-          { name: "Self-driven project" }, // Add team members here if applicable
-        ],
-        timeline: "4 months",
-        overview: "Developed an interactive Sudoku solver that demonstrates various algorithms like Backtracking and Forward Checking to efficiently solve Sudoku puzzles. The project features dynamic hover matrices, probability distribution updates, and allows users to experiment with different solving methods. Key features include step-by-step visualization and real-time impact of algorithms on solving efficiency."
-      }
-    },
-    {
-      cat: 'GAME',
-      name: "SimCity Game",
-      date: "Ongoing",
-      role: "Game Developer",
-      VideoShowCase: CitiesDevGame,
-      // Showcase: "path/to/showcase-image.jpg", // Replace with actual image path if available
-      Overview: {
-        role: "Game Developer — City Simulation Game Development, Dynamic Content Updating, 3D Structures Creation",
-        team: [
-          { name: "Vipul SP" }, // Add team members here if applicable
-        ],
-        timeline: "Ongoing",
-        overview: "Developed a city simulation game that allows players to construct 3D structures, roads, and apartments. The game features dynamic content updates based on in-game time progression, using three.js and web technologies."
-      }
-    },
-    {
-      cat: 'WEB',
-      name: "Colab IITGn",
-      date: "December '24 - February '25",
-      role: "Web Developer",
-      VideoShowCase: Colab,
-      // Showcase: "path/to/showcase-image.jpg", // Replace with actual image path if available
-      Overview: {
-        role: "Web Developer — Frontend Development, Backend Integration, UI/UX Design",
-        team: [
-          { name: "Ananthu JP" }, // https://www.linkedin.com/in/ananthujp/
-        ],
-        timeline: "3 months",
-        overview: "I was responsible for developing a modern, responsive website to showcase the lab’s cutting-edge research and development projects. My work included frontend development using React and integrating backend services to display real-time data related to ongoing projects and events."
-      }
-    },
-  
+    Highlights: {
+      highlight: "A foundational city simulation game with potential for further development and feature expansion.",
+      highlightShow: [
+        { image: MoboDashboard, imageAltText: "Game Screenshot", imageDescription: "City building and management interface." },
+      ],
+    }, extras: [
+      { title: 'App Apk', link: 'https://drive.google.com/drive/folders/1ElarJ3PMnzCQqfaHoMhjmxMZr8p9ZigU' }
+    ]
+  },
+  {
+    cat: 'ALGO',
+    name: "Sudoku Solver",
+    date: "May '24 - July '24",
+    role: "Developer",
+    VideoShowCase: Suduko,
+    // Showcase: "path/to/showcase-image.jpg", // Replace with actual image path if available
+    Overview: {
+      role: "Developer — Sudoku Solver Development, Algorithm Implementation, Interactive Features",
+      team: [
+        { name: "Self-driven project" }, // Add team members here if applicable
+      ],
+      timeline: "4 months",
+      overview: "Developed an interactive Sudoku solver that demonstrates various algorithms like Backtracking, Forward Checking and Arc Consistancy to efficiently solve Sudoku puzzles. The project features dynamic hover matrices, probability distribution updates, and allows users to experiment with different solving methods. Key features include step-by-step visualization and real-time impact of algorithms on solving efficiency."
+    }, extras: [
+      { title: 'Github Repo', link: 'https://github.com/aayushSP2108/Sodoko' },
+      { title: 'Deployed Link', link: 'https://aayushsp2108.github.io/Sodoko/' },
+      { title: 'Video Link', link: 'https://www.youtube.com/watch?v=90e9mfFwAH0' },
+    ]
+  },
+  {
+    cat: 'GAME',
+    name: "SimCity Game",
+    date: "Ongoing",
+    role: "Game Developer",
+    VideoShowCase: CitiesDevGame,
+    // Showcase: "path/to/showcase-image.jpg", // Replace with actual image path if available
+    Overview: {
+      role: "Game Developer — City Simulation Game Development, Dynamic Content Updating, 3D Structures Creation",
+      team: [
+        { name: "Vipul SP" }, // Add team members here if applicable
+      ],
+      timeline: "Ongoing",
+      overview: "Developed a city simulation game that allows players to construct 3D structures, roads, and apartments. The game features dynamic content updates based on in-game time progression, using three.js and web technologies."
+    }, extras: [
+      { title: 'Glimpses', link: 'https://iitgnacin-my.sharepoint.com/:v:/g/personal/22110189_iitgn_ac_in/EdlTS1e8jaRMkUiUBmDftwMBIUWm7e_t95XDnc2Xa59wow?e=v9M0oa' },
+      { title: 'Github Repo', link: 'https://github.com/vipulSP2108/WebMastery-Studio/tree/main/SimCity' },
+    ]
+  },
+  {
+    cat: 'WEB',
+    name: "Colab IITGn",
+    date: "December '24 - February '25",
+    role: "Web Developer",
+    VideoShowCase: Colab,
+    // Showcase: "path/to/showcase-image.jpg", // Replace with actual image path if available
+    Overview: {
+      role: "Web Developer — Frontend Development, Backend Integration, UI/UX Design",
+      team: [
+        { name: "Ananthu JP" }, // https://www.linkedin.com/in/ananthujp/
+      ],
+      timeline: "3 months",
+      overview: "I was responsible for developing a modern, responsive website to showcase the lab’s cutting-edge research and development projects. My work included frontend development using React and integrating backend services to display real-time data related to ongoing projects and events."
+    }, extras: [
+      { title: 'Colab Website', link: 'https://events.iitgn.ac.in/2023/ioh/#/' },
+    ]
+  },
 
 
 
-// ------------------- Same Field/cat but basic -------------------
+
+  // ------------------- Same Field/cat but basic -------------------
 
 
   // {
@@ -162,27 +173,27 @@ export const sampleDataNew = [
 
   // ------------------- Diff Field/cat but Major -------------------
 
-//   {   
-//     cat: 'APP',
-//    VideoShowCase: OutsIIT,
-//    role: "Team Lead",
-//    name: "Drone Data Processing and Modeling",
-//    date: "April 2023",
-//    ShowCase: Project,
-//    Overview: {
-//      role: "Research Assistant — RTK Surveying, Advanced Image Processing",
-//      team: "Prof. Pankaj Khanna, IIT Gandhinagar",
-//      timeline: "4 Months, Completed in April 2023",
-//      overview: "This project focused on drone-based topographic mapping using RTK surveying combined with advanced image processing techniques. The outcome included precise 3D models, orthomosaics, and Digital Elevation Models (DEMs) used for urban planning, infrastructure monitoring, and environmental studies.",
-//    },
-//    Highlights: {
-//      highlight: "Demonstrates the efficiency of integrating drone technology with RTK surveying for high-precision topographic mapping.",
-//      highlightShow: [
-//        // { image: DroneDataProcessing, imageAltText: "Mapping Output", imageDescription: "Detailed 3D model generated from drone data." },
-//        // { image: DroneDataProcessing, imageAltText: "Mapping Output", imageDescription: "Orthomosaic and DEMs used for analysis." },
-//      ],
-//    },
-//  },
+  //   {   
+  //     cat: 'APP',
+  //    VideoShowCase: OutsIIT,
+  //    role: "Team Lead",
+  //    name: "Drone Data Processing and Modeling",
+  //    date: "April 2023",
+  //    ShowCase: Project,
+  //    Overview: {
+  //      role: "Research Assistant — RTK Surveying, Advanced Image Processing",
+  //      team: "Prof. Pankaj Khanna, IIT Gandhinagar",
+  //      timeline: "4 Months, Completed in April 2023",
+  //      overview: "This project focused on drone-based topographic mapping using RTK surveying combined with advanced image processing techniques. The outcome included precise 3D models, orthomosaics, and Digital Elevation Models (DEMs) used for urban planning, infrastructure monitoring, and environmental studies.",
+  //    },
+  //    Highlights: {
+  //      highlight: "Demonstrates the efficiency of integrating drone technology with RTK surveying for high-precision topographic mapping.",
+  //      highlightShow: [
+  //        // { image: DroneDataProcessing, imageAltText: "Mapping Output", imageDescription: "Detailed 3D model generated from drone data." },
+  //        // { image: DroneDataProcessing, imageAltText: "Mapping Output", imageDescription: "Orthomosaic and DEMs used for analysis." },
+  //      ],
+  //    },
+  //  },
   // {
   //   cat: 'APP',
   //   VideoShowCase: OutsIIT,
@@ -256,27 +267,27 @@ export const sampleDataNew = [
   //     ],
   //   },
   // },
-// {
-//     cat: 'APP',
-//     VideoShowCase: OutsIIT,
-//     role: "Team Lead",
-//     name: "SensePad",
-//     date: "August 2023 - November 2023",
-//     ShowCase: Project,
-//     Overview: {
-//       role: "Leader — Accessibility Device Development",
-//       team: "Collaborative project",
-//       timeline: "4 Months, Completed in November 2023",
-//       overview: "Directed the development of SensePad, a project aimed at revolutionizing keyboard accessibility for the blind. Managed model-making and programming, resulting in a fully functional 10-key keyboard with tactile features for blind users.",
-//     },
-//     Highlights: {
-//       highlight: "Revolutionized keyboard accessibility with SensePad, providing a fully functional tactile keyboard for blind users.",
-//       highlightShow: [
-//         // { image: SensePad, imageAltText: "SensePad Keyboard", imageDescription: "10-key keyboard designed for accessibility." },
-//         // { image: SensePad, imageAltText: "Tactile Features", imageDescription: "Detailed view of tactile features and design." },
-//       ],
-//     },
-//   },
+  // {
+  //     cat: 'APP',
+  //     VideoShowCase: OutsIIT,
+  //     role: "Team Lead",
+  //     name: "SensePad",
+  //     date: "August 2023 - November 2023",
+  //     ShowCase: Project,
+  //     Overview: {
+  //       role: "Leader — Accessibility Device Development",
+  //       team: "Collaborative project",
+  //       timeline: "4 Months, Completed in November 2023",
+  //       overview: "Directed the development of SensePad, a project aimed at revolutionizing keyboard accessibility for the blind. Managed model-making and programming, resulting in a fully functional 10-key keyboard with tactile features for blind users.",
+  //     },
+  //     Highlights: {
+  //       highlight: "Revolutionized keyboard accessibility with SensePad, providing a fully functional tactile keyboard for blind users.",
+  //       highlightShow: [
+  //         // { image: SensePad, imageAltText: "SensePad Keyboard", imageDescription: "10-key keyboard designed for accessibility." },
+  //         // { image: SensePad, imageAltText: "Tactile Features", imageDescription: "Detailed view of tactile features and design." },
+  //       ],
+  //     },
+  //   },
   // {
   //   cat: 'APP',
   //   VideoShowCase: OutsIIT,
